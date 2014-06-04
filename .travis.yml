@@ -3,7 +3,6 @@ before_install:
   - gem install xcpretty
 before_script:
   - export LANG=en_US.UTF-8
-install: echo
 script:
   - set -o pipefail
   - xcodebuild -workspace JPSimulatorHacksSample.xcworkspace -scheme 'JPSimulatorHacksSample' -sdk iphonesimulator -configuration Debug test | xcpretty -c
