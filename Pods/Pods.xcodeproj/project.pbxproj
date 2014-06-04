@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04853553B2A2487D83E11853 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E7876A8ED0664FAFBD8FF426 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		109922A069714E4CB5D0283F /* Pods-JPSimulatorHacksSampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AB6023CD074959B6C97159 /* Pods-JPSimulatorHacksSampleTests-dummy.m */; };
+		20C0B9475C3D4716AC54B010 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5793555641B454EA3FCE70A /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		2181CA92A98D4C2296A07315 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 42737CE3541F4B3995429019 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		27A1BF541FFA498DA6946C44 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 34D89FE601C141C29C0EE380 /* FMResultSet.h */; };
+		59AE81EAA28840ED800B5DB4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = F3ECA5922858427BA05A6B49 /* FMDB.h */; };
+		5FFCD994C93F41C19AC72497 /* JPSimulatorHacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF09BE0DF4C4B19901236F9 /* JPSimulatorHacks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		6B02A3EF77A141A295F00533 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A2DB744ECCB94C5385B06A81 /* FMDatabaseQueue.h */; };
+		7DA73EC37E8F487AAEA80893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FA7952A4E04C3691EC326F /* Foundation.framework */; };
+		8EF2B21A114C4FD6AC4F05BA /* libPods-JPSimulatorHacksSampleTests-FMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8723D22A2D412ABA600A5F /* libPods-JPSimulatorHacksSampleTests-FMDB.a */; };
+		9CC2FDC4A20D4E6E8E381F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FA7952A4E04C3691EC326F /* Foundation.framework */; };
+		9D748D1A16564DA4AEFF86EC /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F662EBE21F647D786BE236F /* FMDatabaseAdditions.h */; };
+		A0A50D5A7E0D4B3FB41170EA /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C78E4326D864229BFBB8173 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-dummy.m */; };
+		BABC08F2B7DF44B3A2472841 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FA7952A4E04C3691EC326F /* Foundation.framework */; };
+		D00F1BF3682C423EA4B1CDC1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0726B37E2E4FA6AF449871 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		D288D45001C04F0CB6EB5231 /* JPSimulatorHacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DBD4E0934BE4B79B303936B /* JPSimulatorHacks.h */; };
+		D36CD6CCEDDD415AB2EAE287 /* Pods-JPSimulatorHacksSampleTests-FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF36BCC90AA458E874BDC9F /* Pods-JPSimulatorHacksSampleTests-FMDB-dummy.m */; };
+		D85E01F775F3404DB9CCF25C /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B4C5BEFA0845B4869415F8 /* FMDatabase.h */; };
+		E044CFC0B9DA46F7BAF860F1 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BEC4A126EC4681A8E6D2F2 /* FMDatabasePool.h */; };
+		F17DC6FDD2D34BBCAC972732 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCA80B2150D476CA8AC5FA4 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		F67B22007708419191134B03 /* libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5F9D2C339848AE8C8FCCA0 /* libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FB795B352784F2DAFF6A65A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C20B24C657F349D7A93D60C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCB6B663136F4191AEDA4FFC;
+			remoteInfo = "Pods-JPSimulatorHacksSampleTests-FMDB";
+		};
+		72929C864A1447C2993485BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C20B24C657F349D7A93D60C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6FA3DAEA4142DE8AA8E2B3;
+			remoteInfo = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks";
+		};
+		E712702DD7C648BC92D6C774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C20B24C657F349D7A93D60C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCB6B663136F4191AEDA4FFC;
+			remoteInfo = "Pods-JPSimulatorHacksSampleTests-FMDB";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02FA7952A4E04C3691EC326F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0DCA80B2150D476CA8AC5FA4 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		34D89FE601C141C29C0EE380 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		3C78E4326D864229BFBB8173 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-dummy.m"; sourceTree = "<group>"; };
+		42737CE3541F4B3995429019 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		4784FD20F1484B83932393CC /* libPods-JPSimulatorHacksSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54AB6023CD074959B6C97159 /* Pods-JPSimulatorHacksSampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPSimulatorHacksSampleTests-dummy.m"; sourceTree = "<group>"; };
+		5EF36BCC90AA458E874BDC9F /* Pods-JPSimulatorHacksSampleTests-FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPSimulatorHacksSampleTests-FMDB-dummy.m"; sourceTree = "<group>"; };
+		700D52C36BFC469F91972B31 /* Pods-JPSimulatorHacksSampleTests-FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPSimulatorHacksSampleTests-FMDB-Private.xcconfig"; sourceTree = "<group>"; };
+		78B4C5BEFA0845B4869415F8 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		7F662EBE21F647D786BE236F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		7FF09BE0DF4C4B19901236F9 /* JPSimulatorHacks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPSimulatorHacks.m; path = JPSimulatorHacks/JPSimulatorHacks.m; sourceTree = "<group>"; };
+		80F85A866FE041B887F69D2A /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-Private.xcconfig"; sourceTree = "<group>"; };
+		8C75E5F87A14497F866CD245 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B0197BFA7614E8FB67CD9CE /* Pods-JPSimulatorHacksSampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPSimulatorHacksSampleTests.xcconfig"; sourceTree = "<group>"; };
+		9B0726B37E2E4FA6AF449871 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		9DBD4E0934BE4B79B303936B /* JPSimulatorHacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPSimulatorHacks.h; path = JPSimulatorHacks/JPSimulatorHacks.h; sourceTree = "<group>"; };
+		A2DB744ECCB94C5385B06A81 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A789B5B56EC344508E1E483F /* Pods-JPSimulatorHacksSampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPSimulatorHacksSampleTests-resources.sh"; sourceTree = "<group>"; };
+		AF7F504408354B5A837950D9 /* Pods-JPSimulatorHacksSampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPSimulatorHacksSampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CA2BF63D38164B20B99A0AF0 /* Pods-JPSimulatorHacksSampleTests-FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPSimulatorHacksSampleTests-FMDB-prefix.pch"; sourceTree = "<group>"; };
+		D408274975934B919F7E7C96 /* Pods-JPSimulatorHacksSampleTests-FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPSimulatorHacksSampleTests-FMDB.xcconfig"; sourceTree = "<group>"; };
+		DD8723D22A2D412ABA600A5F /* libPods-JPSimulatorHacksSampleTests-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5793555641B454EA3FCE70A /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		E5BEC4A126EC4681A8E6D2F2 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		E7876A8ED0664FAFBD8FF426 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		EBC3A73ADE1741848F71CCBA /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-prefix.pch"; sourceTree = "<group>"; };
+		EBF1113E2F1E42DEA14C68E7 /* Pods-JPSimulatorHacksSampleTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPSimulatorHacksSampleTests-environment.h"; sourceTree = "<group>"; };
+		ED5F9D2C339848AE8C8FCCA0 /* libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F5007B39E44A578AB60A41 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks.xcconfig"; sourceTree = "<group>"; };
+		F3ECA5922858427BA05A6B49 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		F7F761F99DB34556A8835362 /* Pods-JPSimulatorHacksSampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPSimulatorHacksSampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		968488E965FF42A0A7303F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC2FDC4A20D4E6E8E381F6B /* Foundation.framework in Frameworks */,
+				8EF2B21A114C4FD6AC4F05BA /* libPods-JPSimulatorHacksSampleTests-FMDB.a in Frameworks */,
+				F67B22007708419191134B03 /* libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D938ACC808A490EA0193AB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA73EC37E8F487AAEA80893 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA2468B9EC6C4EB0A425E3BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABC08F2B7DF44B3A2472841 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03FF46F2C63D42D696DE359D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58E89D7C8A2E44249E318275 /* Pods-JPSimulatorHacksSampleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0613565789FA45E1A2C0E4A2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47BE989305A04629A2FA0961 /* JPSimulatorHacks */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0A51DAD0E52B47B9964FC634 = {
+			isa = PBXGroup;
+			children = (
+				8C75E5F87A14497F866CD245 /* Podfile */,
+				0613565789FA45E1A2C0E4A2 /* Development Pods */,
+				C814BD70554741FCBFB56A61 /* Frameworks */,
+				44D0D186E3384D6780C3B889 /* Pods */,
+				1843AA951FF445E89042F94B /* Products */,
+				03FF46F2C63D42D696DE359D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		0C7938AE676541EFB30E53BE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D408274975934B919F7E7C96 /* Pods-JPSimulatorHacksSampleTests-FMDB.xcconfig */,
+				700D52C36BFC469F91972B31 /* Pods-JPSimulatorHacksSampleTests-FMDB-Private.xcconfig */,
+				5EF36BCC90AA458E874BDC9F /* Pods-JPSimulatorHacksSampleTests-FMDB-dummy.m */,
+				CA2BF63D38164B20B99A0AF0 /* Pods-JPSimulatorHacksSampleTests-FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		1843AA951FF445E89042F94B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4784FD20F1484B83932393CC /* libPods-JPSimulatorHacksSampleTests.a */,
+				DD8723D22A2D412ABA600A5F /* libPods-JPSimulatorHacksSampleTests-FMDB.a */,
+				ED5F9D2C339848AE8C8FCCA0 /* libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44D0D186E3384D6780C3B889 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D235C11364F4A11BC32B603 /* FMDB */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47BE989305A04629A2FA0961 /* JPSimulatorHacks */ = {
+			isa = PBXGroup;
+			children = (
+				9DBD4E0934BE4B79B303936B /* JPSimulatorHacks.h */,
+				7FF09BE0DF4C4B19901236F9 /* JPSimulatorHacks.m */,
+				D9A4EDCE98DE445E996C270F /* Support Files */,
+			);
+			name = JPSimulatorHacks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5869B01CB2B64255B038FB31 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F3ECA5922858427BA05A6B49 /* FMDB.h */,
+				78B4C5BEFA0845B4869415F8 /* FMDatabase.h */,
+				E5793555641B454EA3FCE70A /* FMDatabase.m */,
+				7F662EBE21F647D786BE236F /* FMDatabaseAdditions.h */,
+				42737CE3541F4B3995429019 /* FMDatabaseAdditions.m */,
+				E5BEC4A126EC4681A8E6D2F2 /* FMDatabasePool.h */,
+				9B0726B37E2E4FA6AF449871 /* FMDatabasePool.m */,
+				A2DB744ECCB94C5385B06A81 /* FMDatabaseQueue.h */,
+				E7876A8ED0664FAFBD8FF426 /* FMDatabaseQueue.m */,
+				34D89FE601C141C29C0EE380 /* FMResultSet.h */,
+				0DCA80B2150D476CA8AC5FA4 /* FMResultSet.m */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		58E89D7C8A2E44249E318275 /* Pods-JPSimulatorHacksSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B0197BFA7614E8FB67CD9CE /* Pods-JPSimulatorHacksSampleTests.xcconfig */,
+				F7F761F99DB34556A8835362 /* Pods-JPSimulatorHacksSampleTests-acknowledgements.markdown */,
+				AF7F504408354B5A837950D9 /* Pods-JPSimulatorHacksSampleTests-acknowledgements.plist */,
+				54AB6023CD074959B6C97159 /* Pods-JPSimulatorHacksSampleTests-dummy.m */,
+				EBF1113E2F1E42DEA14C68E7 /* Pods-JPSimulatorHacksSampleTests-environment.h */,
+				A789B5B56EC344508E1E483F /* Pods-JPSimulatorHacksSampleTests-resources.sh */,
+			);
+			name = "Pods-JPSimulatorHacksSampleTests";
+			sourceTree = "<group>";
+		};
+		6D235C11364F4A11BC32B603 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				0C7938AE676541EFB30E53BE /* Support Files */,
+				5869B01CB2B64255B038FB31 /* common */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		8D3257D7496A48A7B2B1910F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				02FA7952A4E04C3691EC326F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C814BD70554741FCBFB56A61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D3257D7496A48A7B2B1910F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9A4EDCE98DE445E996C270F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5007B39E44A578AB60A41 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks.xcconfig */,
+				80F85A866FE041B887F69D2A /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-Private.xcconfig */,
+				3C78E4326D864229BFBB8173 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-dummy.m */,
+				EBC3A73ADE1741848F71CCBA /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		194055E63C804EBE826A5D1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D288D45001C04F0CB6EB5231 /* JPSimulatorHacks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83BC5F4CE2DC4F378B615E4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59AE81EAA28840ED800B5DB4 /* FMDB.h in Headers */,
+				D85E01F775F3404DB9CCF25C /* FMDatabase.h in Headers */,
+				9D748D1A16564DA4AEFF86EC /* FMDatabaseAdditions.h in Headers */,
+				E044CFC0B9DA46F7BAF860F1 /* FMDatabasePool.h in Headers */,
+				6B02A3EF77A141A295F00533 /* FMDatabaseQueue.h in Headers */,
+				27A1BF541FFA498DA6946C44 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E6FA3DAEA4142DE8AA8E2B3 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C8B8C3943404F608ADD0E32 /* Build configuration list for PBXNativeTarget "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks" */;
+			buildPhases = (
+				ED35CA7078ED4ABCB97EE02A /* Sources */,
+				9D938ACC808A490EA0193AB2 /* Frameworks */,
+				194055E63C804EBE826A5D1A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88DBEE65016848D2BFF3A63D /* PBXTargetDependency */,
+			);
+			name = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks";
+			productName = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks";
+			productReference = ED5F9D2C339848AE8C8FCCA0 /* libPods-JPSimulatorHacksSampleTests-JPSimulatorHacks.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3194DE0F50304F32BE4CFE58 /* Pods-JPSimulatorHacksSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6117EF6A50734B13B862FE9D /* Build configuration list for PBXNativeTarget "Pods-JPSimulatorHacksSampleTests" */;
+			buildPhases = (
+				445208EAB16249BE9EBFA9AF /* Sources */,
+				968488E965FF42A0A7303F46 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4D95E17B60C49D7AF018A70 /* PBXTargetDependency */,
+				EF11C53A4C69462B9D673768 /* PBXTargetDependency */,
+			);
+			name = "Pods-JPSimulatorHacksSampleTests";
+			productName = "Pods-JPSimulatorHacksSampleTests";
+			productReference = 4784FD20F1484B83932393CC /* libPods-JPSimulatorHacksSampleTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BCB6B663136F4191AEDA4FFC /* Pods-JPSimulatorHacksSampleTests-FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE4A30B63BC1423B938B0DF1 /* Build configuration list for PBXNativeTarget "Pods-JPSimulatorHacksSampleTests-FMDB" */;
+			buildPhases = (
+				F357F32F1E2144C3A622261A /* Sources */,
+				FA2468B9EC6C4EB0A425E3BD /* Frameworks */,
+				83BC5F4CE2DC4F378B615E4D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JPSimulatorHacksSampleTests-FMDB";
+			productName = "Pods-JPSimulatorHacksSampleTests-FMDB";
+			productReference = DD8723D22A2D412ABA600A5F /* libPods-JPSimulatorHacksSampleTests-FMDB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C20B24C657F349D7A93D60C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 5F5C286C605E44DF95EE876E /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A51DAD0E52B47B9964FC634;
+			productRefGroup = 1843AA951FF445E89042F94B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3194DE0F50304F32BE4CFE58 /* Pods-JPSimulatorHacksSampleTests */,
+				BCB6B663136F4191AEDA4FFC /* Pods-JPSimulatorHacksSampleTests-FMDB */,
+				1E6FA3DAEA4142DE8AA8E2B3 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		445208EAB16249BE9EBFA9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				109922A069714E4CB5D0283F /* Pods-JPSimulatorHacksSampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED35CA7078ED4ABCB97EE02A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FFCD994C93F41C19AC72497 /* JPSimulatorHacks.m in Sources */,
+				A0A50D5A7E0D4B3FB41170EA /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F357F32F1E2144C3A622261A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C0B9475C3D4716AC54B010 /* FMDatabase.m in Sources */,
+				2181CA92A98D4C2296A07315 /* FMDatabaseAdditions.m in Sources */,
+				D00F1BF3682C423EA4B1CDC1 /* FMDatabasePool.m in Sources */,
+				04853553B2A2487D83E11853 /* FMDatabaseQueue.m in Sources */,
+				F17DC6FDD2D34BBCAC972732 /* FMResultSet.m in Sources */,
+				D36CD6CCEDDD415AB2EAE287 /* Pods-JPSimulatorHacksSampleTests-FMDB-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88DBEE65016848D2BFF3A63D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCB6B663136F4191AEDA4FFC /* Pods-JPSimulatorHacksSampleTests-FMDB */;
+			targetProxy = 0FB795B352784F2DAFF6A65A /* PBXContainerItemProxy */;
+		};
+		B4D95E17B60C49D7AF018A70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCB6B663136F4191AEDA4FFC /* Pods-JPSimulatorHacksSampleTests-FMDB */;
+			targetProxy = E712702DD7C648BC92D6C774 /* PBXContainerItemProxy */;
+		};
+		EF11C53A4C69462B9D673768 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6FA3DAEA4142DE8AA8E2B3 /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks */;
+			targetProxy = 72929C864A1447C2993485BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04F4FB404B174DC1A79A59EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F85A866FE041B887F69D2A /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73DB7474416D4765A1F60842 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0197BFA7614E8FB67CD9CE /* Pods-JPSimulatorHacksSampleTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90FEDF9ECB2846A9BAE73917 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		AB0C99DD09A947CA94C5CAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 700D52C36BFC469F91972B31 /* Pods-JPSimulatorHacksSampleTests-FMDB-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-JPSimulatorHacksSampleTests-FMDB-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B305E828347C48669C21D33A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F85A866FE041B887F69D2A /* Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B94F31C806CF4FC78FAB2041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0197BFA7614E8FB67CD9CE /* Pods-JPSimulatorHacksSampleTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C9AD97E7CDC644C0A402EEC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 700D52C36BFC469F91972B31 /* Pods-JPSimulatorHacksSampleTests-FMDB-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-JPSimulatorHacksSampleTests-FMDB-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F07C961BE6FF45A58C7CF7CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F5C286C605E44DF95EE876E /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90FEDF9ECB2846A9BAE73917 /* Debug */,
+				F07C961BE6FF45A58C7CF7CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6117EF6A50734B13B862FE9D /* Build configuration list for PBXNativeTarget "Pods-JPSimulatorHacksSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94F31C806CF4FC78FAB2041 /* Debug */,
+				73DB7474416D4765A1F60842 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C8B8C3943404F608ADD0E32 /* Build configuration list for PBXNativeTarget "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B305E828347C48669C21D33A /* Debug */,
+				04F4FB404B174DC1A79A59EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE4A30B63BC1423B938B0DF1 /* Build configuration list for PBXNativeTarget "Pods-JPSimulatorHacksSampleTests-FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9AD97E7CDC644C0A402EEC4 /* Debug */,
+				AB0C99DD09A947CA94C5CAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C20B24C657F349D7A93D60C0 /* Project object */;
+}

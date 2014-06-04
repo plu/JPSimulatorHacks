@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_JPSimulatorHacksSampleTests_JPSimulatorHacks : NSObject
+@end
+@implementation PodsDummy_Pods_JPSimulatorHacksSampleTests_JPSimulatorHacks
+@end
