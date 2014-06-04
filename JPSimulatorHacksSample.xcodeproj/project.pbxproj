@@ -50,6 +50,8 @@
 		3EC4F254193F9087005C8B43 /* JPSimulatorHacksSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JPSimulatorHacksSampleTests-Info.plist"; sourceTree = "<group>"; };
 		3EC4F256193F9087005C8B43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3EC4F258193F9087005C8B43 /* JPSimulatorHacksSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPSimulatorHacksSampleTests.m; sourceTree = "<group>"; };
+		3EF96CF2193F915900E117DC /* JPSimulatorHacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSimulatorHacks.h; sourceTree = "<group>"; };
+		3EF96CF3193F915900E117DC /* JPSimulatorHacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatorHacks.m; sourceTree = "<group>"; };
 		49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,11 +83,12 @@
 		3EC4F227193F9087005C8B43 = {
 			isa = PBXGroup;
 			children = (
+				3EC4F232193F9087005C8B43 /* Frameworks */,
+				3EF96CF1193F914500E117DC /* JPSimulatorHacks */,
 				3EC4F239193F9087005C8B43 /* JPSimulatorHacksSample */,
 				3EC4F252193F9087005C8B43 /* JPSimulatorHacksSampleTests */,
-				3EC4F232193F9087005C8B43 /* Frameworks */,
-				3EC4F231193F9087005C8B43 /* Products */,
 				201F3B845DDB4C91A5BC615A /* Pods-JPSimulatorHacksSampleTests.xcconfig */,
+				3EC4F231193F9087005C8B43 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +151,15 @@
 				3EC4F255193F9087005C8B43 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EF96CF1193F914500E117DC /* JPSimulatorHacks */ = {
+			isa = PBXGroup;
+			children = (
+				3EF96CF2193F915900E117DC /* JPSimulatorHacks.h */,
+				3EF96CF3193F915900E117DC /* JPSimulatorHacks.m */,
+			);
+			path = JPSimulatorHacks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
