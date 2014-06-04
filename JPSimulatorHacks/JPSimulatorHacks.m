@@ -30,7 +30,7 @@
 @implementation JPSimulatorHacks
 
 static NSString * const JPSimulatorHacksServiceAddressBook = @"kTCCServiceAddressBook";
-static NSString * JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
+static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
 
 #pragma mark - Public
 
