@@ -75,6 +75,8 @@ static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
     BOOL success = NO;
 
     while (!success) {
+        if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathToTCCDB] isDirectory:NO]) continue;
+
         FMDatabase *db = [FMDatabase databaseWithPath:[self pathToTCCDB]];
         if (![db open]) continue;
         if (![db goodConnection]) continue;
@@ -87,6 +89,7 @@ static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
         else {
             NSLog(@"JPSimulatorHacks ERROR: %@", [db lastErrorMessage]);
         }
+
         [db close];
     }
 
