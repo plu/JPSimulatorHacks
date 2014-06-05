@@ -34,4 +34,6 @@
 + (BOOL)grantAccessToPhotos;
 + (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier;
 
++ (void)setTimeout:(NSTimeInterval)timeout;
+
 @end

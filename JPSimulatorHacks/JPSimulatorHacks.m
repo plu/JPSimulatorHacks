@@ -31,6 +31,7 @@
 
 static NSString * const JPSimulatorHacksServiceAddressBook = @"kTCCServiceAddressBook";
 static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
+static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 #pragma mark - Public
 
@@ -62,6 +63,11 @@ static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
                                allowed:YES];
 }
 
++ (void)setTimeout:(NSTimeInterval)timeout
+{
+    JPSimulatorHacksTimeout = timeout;
+}
+
 #pragma mark - Private
 
 + (BOOL)changeAccessToService:(NSString *)service
@@ -73,8 +79,12 @@ static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
 #endif
 
     BOOL success = NO;
+    NSDate *start = [NSDate date];
 
     while (!success) {
+        NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:start];
+        if (elapsed > JPSimulatorHacksTimeout) break;
+
         if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathToTCCDB] isDirectory:NO]) continue;
 
         FMDatabase *db = [FMDatabase databaseWithPath:[self pathToTCCDB]];
