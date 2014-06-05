@@ -36,6 +36,8 @@ identifier, if necessary:
 + (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier;
 ```
 
+### Timeout
+
 By default it tries to write the necessary entries to the `TCC.db` within
 15 seconds. If that's not enough time, it just gives up and returnes `NO`
 from the methods. If for any reason that is not enough time, you can
