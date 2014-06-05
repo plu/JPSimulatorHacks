@@ -38,7 +38,8 @@ identifier, if necessary:
 
 ## Caveats
 
-Currently the whole thing is only supported for application tests.
+* Currently the whole thing is only supported for application tests.
+* When using Xcode bots, sometimes the tests run into an timeout.
 
 ## License (MIT)
 
