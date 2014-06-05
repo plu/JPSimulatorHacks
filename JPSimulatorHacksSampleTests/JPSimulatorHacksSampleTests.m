@@ -29,7 +29,7 @@
 #import <JPSimulatorHacks/JPSimulatorHacks.h>
 #import <XCTest/XCTest.h>
 
-#define ASYNC_TIMEOUT 2.0f
+#define ASYNC_TIMEOUT 10.0f
 
 @interface JPSimulatorHacksSampleTests : XCTestCase
 
