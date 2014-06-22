@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/plu/JPSimulatorHacks.svg?branch=1.0.1)](https://travis-ci.org/plu/JPSimulatorHacks)
+
 # JPSimulatorHacks
 
 ## Description
