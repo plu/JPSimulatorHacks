@@ -50,6 +50,13 @@
     [JPSimulatorHacks disableKeyboardHelpers];
 }
 
+- (void)testAddAssetWithURL
+{
+    NSURL *assetURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/plu/JPSimulatorHacks/master/Data/test.png"];
+    ALAsset *asset = [JPSimulatorHacks addAssetWithURL:assetURL];
+    expect(asset).notTo.beNil();
+}
+
 - (void)testAddressBookAccess
 {
     expect(ABAddressBookGetAuthorizationStatus()).to.equal(kABAuthorizationStatusAuthorized);

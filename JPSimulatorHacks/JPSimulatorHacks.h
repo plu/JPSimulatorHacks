@@ -28,6 +28,9 @@
 
 @interface JPSimulatorHacks : NSObject
 
+// This is blocking, on purpose!
++ (ALAsset *)addAssetWithURL:(NSURL *)imageURL;
+
 + (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block;
 + (void)editPreferences:(void (^)(NSMutableDictionary *preferences))block;
 

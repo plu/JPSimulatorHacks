@@ -24,6 +24,7 @@
 //  THE SOFTWARE.
 //
 
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <FMDB/FMDB.h>
 #import "JPSimulatorHacks.h"
 
@@ -34,6 +35,31 @@ static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
 static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 #pragma mark - Public
+
++ (ALAsset *)addAssetWithURL:(NSURL *)imageURL
+{
+    __block ALAsset *asset;
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+
+    NSTimeInterval timeout = JPSimulatorHacksTimeout;
+    NSDate *expiryDate = [NSDate dateWithTimeIntervalSinceNow:timeout];
+
+    while (!asset) {
+        if(([(NSDate *)[NSDate date] compare:expiryDate] == NSOrderedDescending)) {
+            break;
+        }
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+
+        [library writeImageDataToSavedPhotosAlbum:imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
+            [library assetForURL:assetURL resultBlock:^(ALAsset *inAsset) {
+                asset = inAsset;
+            } failureBlock:nil];
+        }];
+    }
+
+    return asset;
+}
 
 + (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block
 {

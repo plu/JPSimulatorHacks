@@ -80,6 +80,16 @@ There's also an API to specify the bundle identifier, if necessary:
 + (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier;
 ```
 
+You can also add some test images from a given URL. The method will block until
+the Asset has been stored. This is helpful so your tests will only start after
+the Asset is available.
+
+```objc
+[JPSimulatorHacks grantAccessToPhotos];
+NSURL *assetURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/plu/JPSimulatorHacks/master/Data/test.png"];
+ALAsset *asset = [JPSimulatorHacks addAssetWithURL:assetURL];
+```
+
 ### Timeout
 
 By default it tries to write the necessary entries to the `TCC.db` within
