@@ -6,9 +6,13 @@ PODS:
     - FMDB/common
   - JPSimulatorHacks (1.0.2):
     - FMDB (~> 2.3)
+  - KIF (3.0.6):
+    - KIF/XCTest
+  - KIF/XCTest (3.0.6)
 
 DEPENDENCIES:
   - JPSimulatorHacks (from `.`)
+  - KIF (~> 3.0)
 
 EXTERNAL SOURCES:
   JPSimulatorHacks:
@@ -17,5 +21,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
   JPSimulatorHacks: 17a5c58b478c7e9f6c96d77018edbb30d99aba84
+  KIF: 7fcc68436ffda73749885a68b998fdac7bf6f9f4
 
 COCOAPODS: 0.33.1
