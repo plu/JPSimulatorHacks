@@ -14,6 +14,8 @@ grant this access before running your tests.
 
 ## Usage
 
+### AddressBook
+
 ```objc
 #import <JPSimulatorHacks/JPSimulatorHacks.h>
 
@@ -23,18 +25,58 @@ grant this access before running your tests.
 {
     [super setUp];
     [JPSimulatorHacks grantAccessToAddressBook];
+}
+
+@end
+```
+
+This will grant access to the addressbook for the current bundle identifier.
+There's also an API to specify the bundle identifier, if necessary:
+
+```objc
++ (BOOL)grantAccessToAddressBookForBundleIdentifier:(NSString *)bundleIdentifier;
+```
+
+### Keyboard
+
+```objc
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
+
+@implementation MyAppTests
+
++ (void)setUp
+{
+    [super setUp];
+    [JPSimulatorHacks setDefaultKeyboard:@"en_US@hw=US;sw=QWERTY"];
+    [JPSimulatorHacks disableKeyboardHelpers];
+}
+
+@end
+```
+
+This will disable all the auto correction helpers and set the keyboard to the
+default English one.
+
+### Photos
+
+```objc
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
+
+@implementation MyAppTests
+
++ (void)setUp
+{
+    [super setUp];
     [JPSimulatorHacks grantAccessToPhotos];
 }
 
 @end
 ```
 
-This will grant access to the addressbook and the photos library for the
-current bundle identifier. There's also an API to specify the bundle
-identifier, if necessary:
+This will grant access to the photos library for the current bundle identifier.
+There's also an API to specify the bundle identifier, if necessary:
 
 ```objc
-+ (BOOL)grantAccessToAddressBookForBundleIdentifier:(NSString *)bundleIdentifier;
 + (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier;
 ```
 
