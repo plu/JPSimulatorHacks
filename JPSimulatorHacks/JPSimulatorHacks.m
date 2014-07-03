@@ -163,6 +163,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
         }
 
         [db close];
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.05]];
     }
 
     return success;
