@@ -1,4 +1,5 @@
 PODS:
+  - Expecta (0.3.1)
   - FMDB (2.3):
     - FMDB/standard
   - FMDB/common (2.3)
@@ -11,6 +12,7 @@ PODS:
   - KIF/XCTest (3.0.6)
 
 DEPENDENCIES:
+  - Expecta (~> 0.3)
   - JPSimulatorHacks (from `.`)
   - KIF (~> 3.0)
 
@@ -19,6 +21,7 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
   JPSimulatorHacks: 17a5c58b478c7e9f6c96d77018edbb30d99aba84
   KIF: 7fcc68436ffda73749885a68b998fdac7bf6f9f4
