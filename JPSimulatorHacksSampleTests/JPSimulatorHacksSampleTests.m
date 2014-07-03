@@ -40,6 +40,7 @@
     [super setUp];
     [JPSimulatorHacks grantAccessToAddressBook];
     [JPSimulatorHacks grantAccessToPhotos];
+    [JPSimulatorHacks useEnglishKeyboardAndDisableAllKeyboardHelpers];
 }
 
 - (void)testAddressBookAccess

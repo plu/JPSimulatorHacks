@@ -35,6 +35,16 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 #pragma mark - Public
 
++ (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block
+{
+    [self editPlist:[self pathToGlobalPreferences] block:block];
+}
+
++ (void)editPreferences:(void (^)(NSMutableDictionary *preferences))block
+{
+    [self editPlist:[self pathToPreferences] block:block];
+}
+
 + (BOOL)grantAccessToAddressBook
 {
     return [self changeAccessToService:JPSimulatorHacksServiceAddressBook
@@ -66,6 +76,20 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 + (void)setTimeout:(NSTimeInterval)timeout
 {
     JPSimulatorHacksTimeout = timeout;
+}
+
++ (void)useEnglishKeyboardAndDisableAllKeyboardHelpers
+{
+    [self editPreferences:^(NSMutableDictionary *preferences) {
+        [preferences setValue:@NO forKey:@"KeyboardAutocapitalization"];
+        [preferences setValue:@NO forKey:@"KeyboardAutocorrection"];
+        [preferences setValue:@NO forKey:@"KeyboardCapsLock"];
+        [preferences setValue:@NO forKey:@"KeyboardCheckSpelling"];
+        [preferences setValue:@NO forKey:@"KeyboardPeriodShortcut"];
+        [preferences setValue:@YES forKey:@"UIKeyboardDidShowInternationalInfoAlert"];
+        [preferences setValue:@"en_US@hw=US;sw=QWERTY" forKey:@"KeyboardLastChosen"];
+        [preferences setValue:@"en_US@hw=US;sw=QWERTY" forKey:@"KeyboardLastUsed"];
+    }];
 }
 
 #pragma mark - Private
@@ -106,11 +130,62 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     return success;
 }
 
++ (void)editPlist:(NSString *)plistPath block:(void (^)(NSMutableDictionary *))block
+{
+#if !(TARGET_IPHONE_SIMULATOR)
+    return;
+#endif
+
+    [self waitForFile:plistPath];
+
+    NSMutableDictionary *preferences = [[NSDictionary dictionaryWithContentsOfFile:plistPath] mutableCopy];
+    block(preferences);
+
+    NSData *data = [NSPropertyListSerialization dataWithPropertyList:preferences
+                                                              format:NSPropertyListBinaryFormat_v1_0
+                                                             options:0
+                                                               error:nil];
+    [data writeToFile:plistPath atomically:YES];
+}
+
++ (NSString *)pathToPreferences
+{
+    NSURL *mainBundleURL = [NSBundle mainBundle].bundleURL;
+    NSURL *relativePreferencesURL = [mainBundleURL URLByAppendingPathComponent:@"../../../Library/Preferences/com.apple.Preferences.plist"];
+    return [[relativePreferencesURL URLByStandardizingPath] path];
+}
+
++ (NSString *)pathToGlobalPreferences
+{
+    NSURL *mainBundleURL = [NSBundle mainBundle].bundleURL;
+    NSURL *relativePreferencesURL = [mainBundleURL URLByAppendingPathComponent:@"../../../Library/Preferences/.GlobalPreferences.plist"];
+    return [[relativePreferencesURL URLByStandardizingPath] path];
+}
+
 + (NSString *)pathToTCCDB
 {
     NSURL *mainBundleURL = [NSBundle mainBundle].bundleURL;
     NSURL *relativeTCCDBURL = [mainBundleURL URLByAppendingPathComponent:@"../../../Library/TCC/TCC.db"];
     return [[relativeTCCDBURL URLByStandardizingPath] path];
+}
+
++ (BOOL)waitForFile:(NSString *)filePath
+{
+    BOOL success = NO;
+    NSDate *start = [NSDate date];
+
+    while (!success) {
+        NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:start];
+        if (elapsed > JPSimulatorHacksTimeout) break;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:NO]) continue;
+
+        NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
+        if ([attributes valueForKey:NSFileSize] == 0) continue;
+
+        success = YES;
+    }
+
+    return success;
 }
 
 @end

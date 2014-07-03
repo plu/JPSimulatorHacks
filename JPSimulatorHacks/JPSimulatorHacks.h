@@ -28,6 +28,9 @@
 
 @interface JPSimulatorHacks : NSObject
 
++ (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block;
++ (void)editPreferences:(void (^)(NSMutableDictionary *preferences))block;
+
 + (BOOL)grantAccessToAddressBook;
 + (BOOL)grantAccessToAddressBookForBundleIdentifier:(NSString *)bundleIdentifier;
 
@@ -35,5 +38,7 @@
 + (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier;
 
 + (void)setTimeout:(NSTimeInterval)timeout;
+
++ (void)useEnglishKeyboardAndDisableAllKeyboardHelpers;
 
 @end
