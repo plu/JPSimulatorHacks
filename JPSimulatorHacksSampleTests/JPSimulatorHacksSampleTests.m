@@ -40,7 +40,8 @@
     [super setUp];
     [JPSimulatorHacks grantAccessToAddressBook];
     [JPSimulatorHacks grantAccessToPhotos];
-    [JPSimulatorHacks useEnglishKeyboardAndDisableAllKeyboardHelpers];
+    [JPSimulatorHacks setDefaultKeyboard:@"en_US@hw=US;sw=QWERTY"];
+    [JPSimulatorHacks disableKeyboardHelpers];
 }
 
 - (void)testAddressBookAccess

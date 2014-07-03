@@ -39,6 +39,7 @@
 
 + (void)setTimeout:(NSTimeInterval)timeout;
 
-+ (void)useEnglishKeyboardAndDisableAllKeyboardHelpers;
++ (void)disableKeyboardHelpers;
++ (void)setDefaultKeyboard:(NSString *)keyboard;
 
 @end

@@ -78,7 +78,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     JPSimulatorHacksTimeout = timeout;
 }
 
-+ (void)useEnglishKeyboardAndDisableAllKeyboardHelpers
++ (void)disableKeyboardHelpers
 {
     [self editPreferences:^(NSMutableDictionary *preferences) {
         [preferences setValue:@NO forKey:@"KeyboardAutocapitalization"];
@@ -87,8 +87,14 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
         [preferences setValue:@NO forKey:@"KeyboardCheckSpelling"];
         [preferences setValue:@NO forKey:@"KeyboardPeriodShortcut"];
         [preferences setValue:@YES forKey:@"UIKeyboardDidShowInternationalInfoAlert"];
-        [preferences setValue:@"en_US@hw=US;sw=QWERTY" forKey:@"KeyboardLastChosen"];
-        [preferences setValue:@"en_US@hw=US;sw=QWERTY" forKey:@"KeyboardLastUsed"];
+    }];
+}
+
++ (void)setDefaultKeyboard:(NSString *)keyboard
+{
+    [self editPreferences:^(NSMutableDictionary *preferences) {
+        [preferences setValue:keyboard forKey:@"KeyboardLastChosen"];
+        [preferences setValue:keyboard forKey:@"KeyboardLastUsed"];
     }];
 }
 
