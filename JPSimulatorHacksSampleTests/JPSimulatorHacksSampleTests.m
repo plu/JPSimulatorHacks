@@ -24,8 +24,11 @@
 //  THE SOFTWARE.
 //
 
+#define EXP_SHORTHAND
+
 #import <AddressBook/AddressBook.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <Expecta/Expecta.h>
 #import <JPSimulatorHacks/JPSimulatorHacks.h>
 #import <KIF/KIF.h>
 #import <KIF/UIAccessibilityElement-KIFAdditions.h>
@@ -49,12 +52,12 @@
 
 - (void)testAddressBookAccess
 {
-    XCTAssertEqual(ABAddressBookGetAuthorizationStatus(), kABAuthorizationStatusAuthorized);
+    expect(ABAddressBookGetAuthorizationStatus()).to.equal(kABAuthorizationStatusAuthorized);
 }
 
 - (void)testPhotosAccess
 {
-    XCTAssertEqual([ALAssetsLibrary authorizationStatus], ALAuthorizationStatusAuthorized);
+    expect([ALAssetsLibrary authorizationStatus]).to.equal(ALAuthorizationStatusAuthorized);
 }
 
 - (void)testKeyboardSettings
