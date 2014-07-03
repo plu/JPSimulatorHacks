@@ -4,7 +4,7 @@ PODS:
   - FMDB/common (2.3)
   - FMDB/standard (2.3):
     - FMDB/common
-  - JPSimulatorHacks (1.0.0):
+  - JPSimulatorHacks (1.0.2):
     - FMDB (~> 2.3)
 
 DEPENDENCIES:
@@ -16,6 +16,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
-  JPSimulatorHacks: 85648e97233cc74f2f483c7e8ae351e2e6160ad8
+  JPSimulatorHacks: 17a5c58b478c7e9f6c96d77018edbb30d99aba84
 
 COCOAPODS: 0.33.1

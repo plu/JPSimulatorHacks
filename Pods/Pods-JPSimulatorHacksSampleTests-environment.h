@@ -28,5 +28,5 @@
 #define COCOAPODS_POD_AVAILABLE_JPSimulatorHacks
 #define COCOAPODS_VERSION_MAJOR_JPSimulatorHacks 1
 #define COCOAPODS_VERSION_MINOR_JPSimulatorHacks 0
-#define COCOAPODS_VERSION_PATCH_JPSimulatorHacks 0
+#define COCOAPODS_VERSION_PATCH_JPSimulatorHacks 2
 
