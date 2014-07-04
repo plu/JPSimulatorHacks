@@ -73,7 +73,7 @@
     [tester waitForViewWithAccessibilityLabel:TextField];
 
     // If the keyboard settings do not get applied, this will end up autocorrected and will fail:
-    // Charly said, Main Street is crowded
+    // Charly said, Main Street 
     [tester clearTextFromAndThenEnterText:@"charly said, main street "
            intoViewWithAccessibilityLabel:TextField];
 
