@@ -26,6 +26,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALAsset;
+
 @interface JPSimulatorHacks : NSObject
 
 // This is blocking, on purpose!
