@@ -147,7 +147,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
         NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:start];
         if (elapsed > JPSimulatorHacksTimeout) break;
 
-        if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathToTCCDB] isDirectory:NO]) continue;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathToTCCDB] isDirectory:nil]) continue;
 
         FMDatabase *db = [FMDatabase databaseWithPath:[self pathToTCCDB]];
         if (![db open]) continue;
@@ -216,7 +216,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     while (!success) {
         NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:start];
         if (elapsed > JPSimulatorHacksTimeout) break;
-        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:NO]) continue;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:nil]) continue;
 
         NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
         if ([attributes valueForKey:NSFileSize] == 0) continue;
