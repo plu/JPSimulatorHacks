@@ -1,6 +1,6 @@
-FRAMEWORK_SEARCH_PATHS = $(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks $(inherited) "$(SDKROOT)/Developer/Library/Frameworks"
+FRAMEWORK_SEARCH_PATHS = $(PLATFORM_DIR)/Developer/Library/Frameworks $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Expecta" "${PODS_ROOT}/Headers/FMDB" "${PODS_ROOT}/Headers/JPSimulatorHacks" "${PODS_ROOT}/Headers/KIF"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/Expecta" -isystem "${PODS_ROOT}/Headers/FMDB" -isystem "${PODS_ROOT}/Headers/JPSimulatorHacks" -isystem "${PODS_ROOT}/Headers/KIF" -DKIF_XCTEST
-OTHER_LDFLAGS = -ObjC -lsqlite3 -framework CoreGraphics -framework Foundation -framework XCTest
+OTHER_LDFLAGS = -ObjC -l "Pods-JPSimulatorHacksSampleTests-Expecta" -l "Pods-JPSimulatorHacksSampleTests-FMDB" -l "Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks" -l "Pods-JPSimulatorHacksSampleTests-KIF" -l "sqlite3" -framework "CoreGraphics" -framework "Foundation" -framework "XCTest"
 PODS_ROOT = ${SRCROOT}/Pods
