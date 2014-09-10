@@ -207,17 +207,22 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 + (NSURL *)libraryURL
 {
-    NSURL *url = [NSBundle mainBundle].bundleURL;
-    do {
-        url = [[url URLByAppendingPathComponent:@".."] URLByStandardizingPath];
-        NSURL *libraryURL = [url URLByAppendingPathComponent:@"Library"];
-        BOOL isDirectory;
-        if ([[NSFileManager defaultManager] fileExistsAtPath:libraryURL.path isDirectory:&isDirectory] && isDirectory) {
-            url = libraryURL;
-            break;
-        }
-    } while (![url.path isEqualToString:@"/"]);
-    return url;
+    static NSURL *result;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURL *url = [NSBundle mainBundle].bundleURL;
+        do {
+            url = [[url URLByAppendingPathComponent:@".."] URLByStandardizingPath];
+            NSURL *libraryURL = [url URLByAppendingPathComponent:@"Library"];
+            BOOL isDirectory;
+            if ([[NSFileManager defaultManager] fileExistsAtPath:libraryURL.path isDirectory:&isDirectory] && isDirectory) {
+                url = libraryURL;
+                break;
+            }
+        } while (![url.path isEqualToString:@"/"]);
+        result = url;
+    });
+    return result;
 }
 
 + (BOOL)waitForFile:(NSString *)filePath
