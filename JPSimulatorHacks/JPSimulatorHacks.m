@@ -210,7 +210,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     static NSURL *result;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSURL *url = [NSBundle mainBundle].bundleURL;
+        NSURL *url = [[NSBundle mainBundle].bundleURL URLByAppendingPathComponent:@".."];
         do {
             url = [[url URLByAppendingPathComponent:@".."] URLByStandardizingPath];
             NSURL *libraryURL = [url URLByAppendingPathComponent:@"Library"];
