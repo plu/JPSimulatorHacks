@@ -147,7 +147,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
         NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:start];
         if (elapsed > JPSimulatorHacksTimeout) break;
 
-        if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathToTCCDB] isDirectory:nil]) continue;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathToTCCDB]]) continue;
 
         FMDatabase *db = [FMDatabase databaseWithPath:[self pathToTCCDB]];
         if (![db open]) continue;
@@ -189,23 +189,35 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 + (NSString *)pathToPreferences
 {
-    NSURL *mainBundleURL = [NSBundle mainBundle].bundleURL;
-    NSURL *relativePreferencesURL = [mainBundleURL URLByAppendingPathComponent:@"../../../Library/Preferences/com.apple.Preferences.plist"];
+    NSURL *relativePreferencesURL = [[self libraryURL] URLByAppendingPathComponent:@"Preferences/com.apple.Preferences.plist"];
     return [[relativePreferencesURL URLByStandardizingPath] path];
 }
 
 + (NSString *)pathToGlobalPreferences
 {
-    NSURL *mainBundleURL = [NSBundle mainBundle].bundleURL;
-    NSURL *relativePreferencesURL = [mainBundleURL URLByAppendingPathComponent:@"../../../Library/Preferences/.GlobalPreferences.plist"];
+    NSURL *relativePreferencesURL = [[self libraryURL] URLByAppendingPathComponent:@"Preferences/.GlobalPreferences.plist"];
     return [[relativePreferencesURL URLByStandardizingPath] path];
 }
 
 + (NSString *)pathToTCCDB
 {
-    NSURL *mainBundleURL = [NSBundle mainBundle].bundleURL;
-    NSURL *relativeTCCDBURL = [mainBundleURL URLByAppendingPathComponent:@"../../../Library/TCC/TCC.db"];
+    NSURL *relativeTCCDBURL = [[self libraryURL] URLByAppendingPathComponent:@"TCC/TCC.db"];
     return [[relativeTCCDBURL URLByStandardizingPath] path];
+}
+
++ (NSURL *)libraryURL
+{
+    NSURL *url = [NSBundle mainBundle].bundleURL;
+    do {
+        url = [[url URLByAppendingPathComponent:@".."] URLByStandardizingPath];
+        NSURL *libraryURL = [url URLByAppendingPathComponent:@"Library"];
+        BOOL isDirectory;
+        if ([[NSFileManager defaultManager] fileExistsAtPath:libraryURL.path isDirectory:&isDirectory] && isDirectory) {
+            url = libraryURL;
+            break;
+        }
+    } while (![url.path isEqualToString:@"/"]);
+    return url;
 }
 
 + (BOOL)waitForFile:(NSString *)filePath
@@ -216,7 +228,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     while (!success) {
         NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:start];
         if (elapsed > JPSimulatorHacksTimeout) break;
-        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:nil]) continue;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) continue;
 
         NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
         if ([attributes valueForKey:NSFileSize] == 0) continue;
