@@ -93,7 +93,7 @@ ALAsset *asset = [JPSimulatorHacks addAssetWithURL:assetURL];
 ### Timeout
 
 By default it tries to write the necessary entries to the `TCC.db` within
-15 seconds. If that's not enough time, it just gives up and returnes `NO`
+15 seconds. If that's not enough time, it just gives up and returns `NO`
 from the methods. If for any reason that is not enough time, you can
 change this default timeout via:
 
