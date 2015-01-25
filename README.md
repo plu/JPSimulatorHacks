@@ -4,13 +4,9 @@
 
 ## Description
 
-Hack the Simulator in your tests (grant access to photos, contacts, ...).
+Hack the Simulator in your tests (grant access to photos, contacts, calendar ...).
 
-Did you ever have the problem that your code was wrapping the `AddressBook` or
-the `ALAssetsLibrary` APIs? Running tests can be annoying then. There's this
-`UIAlertView` asking the user to grant access to the contacts and photos,
-which blocks and breaks your tests. Using `JPSimulatorHacks` you can easily
-grant this access before running your tests.
+Did you ever have the problem that your code was wrapping the `AddressBook`, the `EventKit` or the `ALAssetsLibrary` APIs? Running tests can be annoying then. There's this `UIAlertView` asking the user to grant access to the contacts and photos, which blocks and breaks your tests. Using `JPSimulatorHacks` you can easily grant this access before running your tests.
 
 ## Usage
 
@@ -88,6 +84,29 @@ the Asset is available.
 [JPSimulatorHacks grantAccessToPhotos];
 NSURL *assetURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/plu/JPSimulatorHacks/master/Data/test.png"];
 ALAsset *asset = [JPSimulatorHacks addAssetWithURL:assetURL];
+```
+
+### Calendar
+
+```objc
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
+
+@implementation MyAppTests
+
++ (void)setUp
+{
+    [super setUp];
+    [JPSimulatorHacks grantAccessToCalendar];
+}
+
+@end
+```
+
+This will grant access to the calendar for the current bundle identifier.
+There's also an API to specify the bundle identifier, if necessary:
+
+```objc
++ (BOOL)grantAccessToCalendadrForBundleIdentifier:(NSString *)bundleIdentifier;
 ```
 
 ### Timeout
