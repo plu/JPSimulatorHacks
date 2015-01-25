@@ -25,8 +25,8 @@
 //
 
 #import <AssetsLibrary/AssetsLibrary.h>
-#import <FMDB/FMDB.h>
 #import "JPSimulatorHacks.h"
+#import "JPSimulatorHacksDB.h"
 
 @implementation JPSimulatorHacks
 
@@ -202,9 +202,8 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
         if (![[NSFileManager defaultManager] fileExistsAtPath:[self cddbPath]]) continue;
 
-        FMDatabase *db = [FMDatabase databaseWithPath:[self cddbPath]];
+        JPSimulatorHacksDB *db = [JPSimulatorHacksDB databaseWithPath:[self cddbPath]];
         if (![db open]) continue;
-        if (![db goodConnection]) continue;
 
         NSString *query = @"REPLACE INTO access (service, client, client_type, allowed, prompt_count) VALUES (?, ?, ?, ?, ?)";
         NSArray *parameters = @[service, bundleIdentifier, @"0", [@(allowed) stringValue], @"0"];
@@ -212,6 +211,7 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
             success = YES;
         }
         else {
+            [db close];
             NSLog(@"JPSimulatorHacks ERROR: %@", [db lastErrorMessage]);
         }
 
