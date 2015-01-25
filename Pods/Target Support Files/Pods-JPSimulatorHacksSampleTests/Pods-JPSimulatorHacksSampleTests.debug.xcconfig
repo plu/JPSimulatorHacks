@@ -1,7 +1,7 @@
 FRAMEWORK_SEARCH_PATHS = $(PLATFORM_DIR)/Developer/Library/Frameworks $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/JPSimulatorHacks" "${PODS_ROOT}/Headers/Public/KIF"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Expecta" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/JPSimulatorHacks" -isystem "${PODS_ROOT}/Headers/Public/KIF" -DKIF_XCTEST
-OTHER_LDFLAGS = -ObjC -l"Pods-JPSimulatorHacksSampleTests-Expecta" -l"Pods-JPSimulatorHacksSampleTests-FMDB" -l"Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks" -l"Pods-JPSimulatorHacksSampleTests-KIF" -l"sqlite3" -framework "CoreGraphics" -framework "Foundation" -framework "XCTest"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/JPSimulatorHacks" "${PODS_ROOT}/Headers/Public/KIF"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Expecta" -isystem "${PODS_ROOT}/Headers/Public/JPSimulatorHacks" -isystem "${PODS_ROOT}/Headers/Public/KIF" -DKIF_XCTEST
+OTHER_LDFLAGS = -ObjC -l"Pods-JPSimulatorHacksSampleTests-Expecta" -l"Pods-JPSimulatorHacksSampleTests-JPSimulatorHacks" -l"Pods-JPSimulatorHacksSampleTests-KIF" -l"sqlite3" -framework "CoreGraphics" -framework "Foundation" -framework "XCTest"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

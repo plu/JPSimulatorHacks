@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
   s.source_files = 'JPSimulatorHacks/*.{h,m}'
-  s.dependency 'FMDB', '~> 2.3'
   s.library = 'sqlite3'
 end
