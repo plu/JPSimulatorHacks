@@ -108,10 +108,10 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
 
 - (void)close {
     FMDBRetain(self);
-    dispatch_sync(_queue, ^() { 
-        [_db close];
+    dispatch_sync(_queue, ^() {
+        [self->_db close];
         FMDBRelease(_db);
-        _db = 0x00;
+        self->_db = 0x00;
     });
     FMDBRelease(self);
 }
@@ -123,7 +123,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
 #if SQLITE_VERSION_NUMBER >= 3005000
         BOOL success = [_db openWithFlags:_openFlags];
 #else
-        BOOL success = [db open];
+        BOOL success = [_db open];
 #endif
         if (!success) {
             NSLog(@"FMDatabaseQueue could not reopen database for path %@", _path);
@@ -152,7 +152,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
         if ([db hasOpenResultSets]) {
             NSLog(@"Warning: there is at least one open result set around after performing [FMDatabaseQueue inDatabase:]");
             
-#ifdef DEBUG
+#if defined(DEBUG) && DEBUG
             NSSet *openSetCopy = FMDBReturnAutoreleased([[db valueForKey:@"_openResultSets"] copy]);
             for (NSValue *rsInWrappedInATastyValueMeal in openSetCopy) {
                 FMResultSet *rs = (FMResultSet *)[rsInWrappedInATastyValueMeal pointerValue];
