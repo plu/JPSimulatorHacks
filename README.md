@@ -8,6 +8,9 @@ Hack the Simulator in your tests (grant access to photos, contacts, calendar ...
 
 Did you ever have the problem that your code was wrapping the `AddressBook`, the `EventKit` or the `ALAssetsLibrary` APIs? Running tests can be annoying then. There's this `UIAlertView` asking the user to grant access to the contacts and photos, which blocks and breaks your tests. Using `JPSimulatorHacks` you can easily grant this access before running your tests.
 
+If you encounter any problems, please check out the [caveats](#caveats)
+documented below.
+
 ## Usage
 
 ### AddressBook
@@ -132,8 +135,11 @@ change this default timeout via:
 
 ## Caveats
 
-* Currently the whole thing is only supported for application tests.
+* `JPSimulatorHacks` only works if unit test suite is run against
+real application target: Its `Host Application` *is not* set to `None`!
+See also: http://stackoverflow.com/a/28135995/598057
 * When using Xcode bots, sometimes the tests run into an timeout.
+* The method disableKeyboardHelpers only works on iOS < 8.x.
 
 ## License (MIT)
 
