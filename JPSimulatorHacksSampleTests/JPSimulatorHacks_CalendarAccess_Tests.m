@@ -1,6 +1,6 @@
 //
-//  JPSimulatorHacks.h
-//  JPSimulatorHacks
+//  JPSimulatorHacks_CalendarAccess_Tests.m
+//  JPSimulatorHacksSample
 //
 //  Created by Johannes Plunien on 04/06/14.
 //  Copyright (C) 2014 Johannes Plunien
@@ -24,30 +24,28 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#define EXP_SHORTHAND
 
-@class ALAsset;
+#import <UIKit/UIKit.h>
+#import <XCTest/XCTest.h>
+#import <Expecta/Expecta.h>
 
-@interface JPSimulatorHacks : NSObject
+#import <EventKit/EventKit.h>
 
-// This is blocking, on purpose!
-+ (ALAsset *)addAssetWithURL:(NSURL *)imageURL;
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
 
-+ (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block;
-+ (void)editPreferences:(void (^)(NSMutableDictionary *preferences))block;
+@interface JPSimulatorHacks_CalendarAccess_Tests : XCTestCase
+@end
 
-+ (BOOL)grantAccessToAddressBook;
-+ (BOOL)grantAccessToAddressBookForBundleIdentifier:(NSString *)bundleIdentifier;
+@implementation JPSimulatorHacks_CalendarAccess_Tests
 
-+ (BOOL)grantAccessToPhotos;
-+ (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier;
+- (void)testGrantingAccessToCalendar {
+    EKAuthorizationStatus authorizationStatus;
 
-+ (BOOL)grantAccessToCalendar;
-+ (BOOL)grantAccessToCalendarForBundleIdentifier:(NSString *)bundleIdentifier;
+    [JPSimulatorHacks grantAccessToCalendar];
 
-+ (void)setTimeout:(NSTimeInterval)timeout;
-
-+ (void)disableKeyboardHelpers;
-+ (void)setDefaultKeyboard:(NSString *)keyboard;
+    authorizationStatus = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+    expect(authorizationStatus).to.equal(EKAuthorizationStatusAuthorized);
+}
 
 @end

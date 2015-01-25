@@ -31,7 +31,9 @@
 @implementation JPSimulatorHacks
 
 static NSString * const JPSimulatorHacksServiceAddressBook = @"kTCCServiceAddressBook";
-static NSString * const JPSimulatorHacksServicePhotos = @"kTCCServicePhotos";
+static NSString * const JPSimulatorHacksServicePhotos      = @"kTCCServicePhotos";
+static NSString * const JPSimulatorHacksServiceCalendar    = @"kTCCServiceCalendar";
+
 static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 #pragma mark - Public
@@ -95,6 +97,20 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 + (BOOL)grantAccessToPhotosForBundleIdentifier:(NSString *)bundleIdentifier
 {
     return [self changeAccessToService:JPSimulatorHacksServicePhotos
+                      bundleIdentifier:bundleIdentifier
+                               allowed:YES];
+}
+
++ (BOOL)grantAccessToCalendar
+{
+    return [self changeAccessToService:JPSimulatorHacksServiceCalendar
+                      bundleIdentifier:[NSBundle mainBundle].bundleIdentifier
+                               allowed:YES];
+}
+
++ (BOOL)grantAccessToCalendarForBundleIdentifier:(NSString *)bundleIdentifier
+{
+    return [self changeAccessToService:JPSimulatorHacksServiceCalendar
                       bundleIdentifier:bundleIdentifier
                                allowed:YES];
 }
