@@ -53,6 +53,12 @@ There's also an API to specify the bundle identifier, if necessary:
 This will disable all the auto correction helpers and set the keyboard to the
 default English one.
 
+*Note*: Unfortunately this only works on iOS Simulator < 8.x. Even if you
+manually disable the autocorrection feature in the Settings.app in your
+simulator, it still does apply the autocorrection to the entered text. I
+consider this a bug in the simulator, so there's not much we can do about
+it.
+
 ### Photos
 
 ```objc
