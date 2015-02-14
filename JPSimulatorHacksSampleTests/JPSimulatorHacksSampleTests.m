@@ -28,7 +28,6 @@
 
 #import <AddressBook/AddressBook.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-#import <EventKit/EventKit.h>
 #import <Expecta/Expecta.h>
 #import <JPSimulatorHacks/JPSimulatorHacks.h>
 #import <KIF/KIF.h>
@@ -46,7 +45,6 @@
     [super setUp];
     [KIFTestActor setDefaultTimeout:3.0f];
     [JPSimulatorHacks grantAccessToAddressBook];
-    [JPSimulatorHacks grantAccessToCalendar];
     [JPSimulatorHacks grantAccessToPhotos];
     [JPSimulatorHacks setDefaultKeyboard:@"de_DE@hw=German;sw=QWERTZ-German"];
     [JPSimulatorHacks disableKeyboardHelpers];
@@ -62,11 +60,6 @@
 - (void)testAddressBookAccess
 {
     expect(ABAddressBookGetAuthorizationStatus()).to.equal(kABAuthorizationStatusAuthorized);
-}
-
-- (void)testCalendarAccess
-{
-    expect([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent]).to.equal(EKAuthorizationStatusAuthorized);
 }
 
 - (void)testPhotosAccess
