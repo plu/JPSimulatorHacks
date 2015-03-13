@@ -11,6 +11,14 @@ Did you ever have the problem that your code was wrapping the `AddressBook`, the
 If you encounter any problems, please check out the [caveats](#caveats)
 documented below.
 
+### Installation
+
+Install JPSimulatorHacks with [Cocoapods](http://cocoapods.org/)
+
+```
+pod 'JPSimulatorHacks'
+```
+
 ## Usage
 
 ### AddressBook
