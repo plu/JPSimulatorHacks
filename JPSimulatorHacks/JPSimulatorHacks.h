@@ -45,6 +45,9 @@
 + (BOOL)grantAccessToCalendar;
 + (BOOL)grantAccessToCalendarForBundleIdentifier:(NSString *)bundleIdentifier;
 
++ (BOOL)grantAccessToHomeKit;
++ (BOOL)grantAccessToHomeKitForBundleIdentifier:(NSString *)bundleIdentifier;
+
 + (void)setTimeout:(NSTimeInterval)timeout;
 
 + (void)disableKeyboardHelpers;
