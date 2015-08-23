@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'JPSimulatorHacks'
-  s.version      = '1.2.0'
+  s.version      = '1.2.1'
   s.license      = 'MIT'
   s.summary      = 'Hack the Simulator in your tests (grant access to photos, contacts, ...)'
   s.homepage     = 'https://github.com/plu/JPSimulatorHacks'

@@ -1,6 +1,6 @@
 {
   "name": "JPSimulatorHacks",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "summary": "Hack the Simulator in your tests (grant access to photos, contacts, ...)",
   "homepage": "https://github.com/plu/JPSimulatorHacks",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/plu/JPSimulatorHacks.git",
-    "tag": "1.2.0"
+    "tag": "1.2.1"
   },
   "requires_arc": true,
   "platforms": {
