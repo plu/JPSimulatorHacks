@@ -64,7 +64,7 @@
     expect(ABAddressBookGetAuthorizationStatus()).to.equal(kABAuthorizationStatusAuthorized);
 }
 
-- (void)testGrantingAccessToCalendar {
+- (void)testCalendarAccess {
     expect([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent]).to.equal(EKAuthorizationStatusAuthorized);
 }
 
