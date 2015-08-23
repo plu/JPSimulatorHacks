@@ -48,6 +48,7 @@
     [JPSimulatorHacks setDefaultKeyboard:@"de_DE@hw=German;sw=QWERTZ-German"];
     [JPSimulatorHacks disableKeyboardHelpers];
     [JPSimulatorHacks grantAccessToAddressBook];
+    [JPSimulatorHacks grantAccessToCalendar];
     [JPSimulatorHacks grantAccessToPhotos];
 }
 
@@ -64,12 +65,7 @@
 }
 
 - (void)testGrantingAccessToCalendar {
-    EKAuthorizationStatus authorizationStatus;
-
-    [JPSimulatorHacks grantAccessToCalendar];
-
-    authorizationStatus = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
-    expect(authorizationStatus).to.equal(EKAuthorizationStatusAuthorized);
+    expect([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent]).to.equal(EKAuthorizationStatusAuthorized);
 }
 
 - (void)testPhotosAccess
