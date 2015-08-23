@@ -33,6 +33,7 @@
 // This is blocking, on purpose!
 + (ALAsset *)addAssetWithURL:(NSURL *)imageURL;
 
++ (void)editApplicationPreferences:(void (^)(NSMutableDictionary *preferences))block;
 + (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block;
 + (void)editPreferences:(void (^)(NSMutableDictionary *preferences))block;
 

@@ -64,6 +64,11 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     return asset;
 }
 
++ (void)editApplicationPreferences:(void (^)(NSMutableDictionary *preferences))block
+{
+    [self editPlist:[self applicationPreferencesPath] block:block];
+}
+
 + (void)editGlobalPreferences:(void (^)(NSMutableDictionary *preferences))block
 {
     [self editPlist:[self globalPreferencesPath] block:block];
@@ -155,6 +160,12 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
         preferences[@"KeyboardsCurrentAndNext"] = @[keyboard];
     }];
 
+    [self editApplicationPreferences:^(NSMutableDictionary *preferences) {
+        preferences[@"KeyboardLastUsed"] = keyboard;
+        preferences[@"KeyboardLastChosen"] = keyboard;
+        preferences[@"KeyboardsCurrentAndNext"] = @[keyboard];
+    }];
+
     [self editGlobalPreferences:^(NSMutableDictionary *preferences) {
         NSArray *keyboards = preferences[@"AppleKeyboards"];
         preferences[@"AppleKeyboards"] = [keyboards arrayByAddingObject:keyboard];
@@ -171,6 +182,12 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 + (NSString *)globalPreferencesPath
 {
     return [[self libraryURL] URLByAppendingPathComponent:@"Preferences/.GlobalPreferences.plist"].URLByStandardizingPath.path;
+}
+
++ (NSString *)applicationPreferencesPath
+{
+    NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask];
+    return [paths.firstObject URLByAppendingPathComponent:@"../Preferences/com.apple.Preferences.plist"].URLByStandardizingPath.path;
 }
 
 + (NSURL *)libraryURL

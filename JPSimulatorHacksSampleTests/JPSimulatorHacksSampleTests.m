@@ -45,10 +45,10 @@
 {
     [super setUp];
     [KIFTestActor setDefaultTimeout:3.0f];
-    [JPSimulatorHacks grantAccessToAddressBook];
-    [JPSimulatorHacks grantAccessToPhotos];
     [JPSimulatorHacks setDefaultKeyboard:@"de_DE@hw=German;sw=QWERTZ-German"];
     [JPSimulatorHacks disableKeyboardHelpers];
+    [JPSimulatorHacks grantAccessToAddressBook];
+    [JPSimulatorHacks grantAccessToPhotos];
 }
 
 - (void)testAddAssetWithURL
