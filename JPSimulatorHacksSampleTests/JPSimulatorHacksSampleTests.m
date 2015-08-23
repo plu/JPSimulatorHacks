@@ -74,7 +74,8 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:nil];
     HMHomeManager *homeManager = [[HMHomeManager alloc] init];
-    [homeManager addHomeWithName:@"Test" completionHandler:^(HMHome *home, NSError *error) {
+    NSString *name = [NSString stringWithFormat:@"Home %u", arc4random()];
+    [homeManager addHomeWithName:name completionHandler:^(HMHome *home, NSError *error) {
         expect(error).to.beNil();
         expect(home).notTo.beNil();
         [expectation fulfill];
