@@ -29,6 +29,7 @@
 #import <AddressBook/AddressBook.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Expecta/Expecta.h>
+#import <EventKit/EventKit.h>
 #import <JPSimulatorHacks/JPSimulatorHacks.h>
 #import <KIF/KIF.h>
 #import <KIF/UIAccessibilityElement-KIFAdditions.h>
@@ -60,6 +61,15 @@
 - (void)testAddressBookAccess
 {
     expect(ABAddressBookGetAuthorizationStatus()).to.equal(kABAuthorizationStatusAuthorized);
+}
+
+- (void)testGrantingAccessToCalendar {
+    EKAuthorizationStatus authorizationStatus;
+
+    [JPSimulatorHacks grantAccessToCalendar];
+
+    authorizationStatus = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+    expect(authorizationStatus).to.equal(EKAuthorizationStatusAuthorized);
 }
 
 - (void)testPhotosAccess

@@ -21,7 +21,6 @@
 		3EC4F259193F9087005C8B43 /* JPSimulatorHacksSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4F258193F9087005C8B43 /* JPSimulatorHacksSampleTests.m */; };
 		63BE4141C44748CCB995A770 /* libPods-JPSimulatorHacksSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */; };
 		679B02351965D14D00600C91 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679B02341965D14D00600C91 /* Storyboard.storyboard */; };
-		8655A7E71A7505F800DCE344 /* JPSimulatorHacks_CalendarAccess_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8655A7E61A7505F800DCE344 /* JPSimulatorHacks_CalendarAccess_Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 		49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E9C0BFEBF2543FEDCE5F7F /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPSimulatorHacksSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		679B02341965D14D00600C91 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		8655A7E61A7505F800DCE344 /* JPSimulatorHacks_CalendarAccess_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatorHacks_CalendarAccess_Tests.m; sourceTree = "<group>"; };
 		FD4D2B8F172B1E05433035E0 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPSimulatorHacksSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +146,6 @@
 		3EC4F252193F9087005C8B43 /* JPSimulatorHacksSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				8655A7E61A7505F800DCE344 /* JPSimulatorHacks_CalendarAccess_Tests.m */,
 				3EC4F258193F9087005C8B43 /* JPSimulatorHacksSampleTests.m */,
 				3EC4F253193F9087005C8B43 /* Supporting Files */,
 			);
@@ -325,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC4F259193F9087005C8B43 /* JPSimulatorHacksSampleTests.m in Sources */,
-				8655A7E71A7505F800DCE344 /* JPSimulatorHacks_CalendarAccess_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
