@@ -30,6 +30,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Expecta/Expecta.h>
 #import <EventKit/EventKit.h>
+#import <HomeKit/HomeKit.h>
 #import <JPSimulatorHacks/JPSimulatorHacks.h>
 #import <KIF/KIF.h>
 #import <KIF/UIAccessibilityElement-KIFAdditions.h>
@@ -49,6 +50,7 @@
     [JPSimulatorHacks disableKeyboardHelpers];
     [JPSimulatorHacks grantAccessToAddressBook];
     [JPSimulatorHacks grantAccessToCalendar];
+    [JPSimulatorHacks grantAccessToHomeKit];
     [JPSimulatorHacks grantAccessToPhotos];
 }
 
@@ -66,6 +68,18 @@
 
 - (void)testCalendarAccess {
     expect([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent]).to.equal(EKAuthorizationStatusAuthorized);
+}
+
+- (void)testHomeKitAccess
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:nil];
+    HMHomeManager *homeManager = [[HMHomeManager alloc] init];
+    [homeManager addHomeWithName:@"Test" completionHandler:^(HMHome *home, NSError *error) {
+        expect(error).to.beNil();
+        expect(home).notTo.beNil();
+        [expectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5.0f handler:nil];
 }
 
 - (void)testPhotosAccess
