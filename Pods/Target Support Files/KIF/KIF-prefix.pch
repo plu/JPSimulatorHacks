@@ -2,5 +2,4 @@
 #import <UIKit/UIKit.h>
 #endif
 
-#import "Pods-JPSimulatorHacksSampleTests-environment.h"
 #import <CoreGraphics/CoreGraphics.h>
