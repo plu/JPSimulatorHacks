@@ -44,6 +44,52 @@ There's also an API to specify the bundle identifier, if necessary:
 + (BOOL)grantAccessToAddressBookForBundleIdentifier:(NSString *)bundleIdentifier;
 ```
 
+### Calendar
+
+```objc
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
+
+@implementation MyAppTests
+
++ (void)setUp
+{
+    [super setUp];
+    [JPSimulatorHacks grantAccessToCalendar];
+}
+
+@end
+```
+
+This will grant access to the calendar for the current bundle identifier.
+There's also an API to specify the bundle identifier, if necessary:
+
+```objc
++ (BOOL)grantAccessToCalendarForBundleIdentifier:(NSString *)bundleIdentifier;
+```
+
+### HomeKit
+
+```objc
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
+
+@implementation MyAppTests
+
++ (void)setUp
+{
+    [super setUp];
+    [JPSimulatorHacks grantAccessToHomeKit];
+}
+
+@end
+```
+
+This will grant access to `HomeKit` for the current bundle identifier.
+There's also an API to specify the bundle identifier, if necessary:
+
+```objc
++ (BOOL) grantAccessToHomeKitForBundleIdentifier:(NSString *)bundleIdentifier;
+```
+
 ### Keyboard
 
 ```objc
@@ -103,29 +149,6 @@ NSURL *assetURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/plu/J
 ALAsset *asset = [JPSimulatorHacks addAssetWithURL:assetURL];
 ```
 
-### Calendar
-
-```objc
-#import <JPSimulatorHacks/JPSimulatorHacks.h>
-
-@implementation MyAppTests
-
-+ (void)setUp
-{
-    [super setUp];
-    [JPSimulatorHacks grantAccessToCalendar];
-}
-
-@end
-```
-
-This will grant access to the calendar for the current bundle identifier.
-There's also an API to specify the bundle identifier, if necessary:
-
-```objc
-+ (BOOL)grantAccessToCalendadrForBundleIdentifier:(NSString *)bundleIdentifier;
-```
-
 ### Timeout
 
 By default it tries to write the necessary entries to the `TCC.db` within
@@ -139,7 +162,7 @@ change this default timeout via:
     [super setUp];
     [JPSimulatorHacks setTimeout:30.0f];
 }
- ```
+```
 
 ## Caveats
 
