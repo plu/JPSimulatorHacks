@@ -19,7 +19,6 @@
 		3EC4F24F193F9087005C8B43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4F237193F9087005C8B43 /* UIKit.framework */; };
 		3EC4F257193F9087005C8B43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4F255193F9087005C8B43 /* InfoPlist.strings */; };
 		3EC4F259193F9087005C8B43 /* JPSimulatorHacksSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4F258193F9087005C8B43 /* JPSimulatorHacksSampleTests.m */; };
-		3EEDF5951B89B7E000CE022E /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEDF5941B89B7E000CE022E /* HomeKit.framework */; };
 		63BE4141C44748CCB995A770 /* libPods-JPSimulatorHacksSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */; };
 		679B02351965D14D00600C91 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679B02341965D14D00600C91 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 		3EE2514E1A7525410045FCCB /* JPSimulatorHacksDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSimulatorHacksDB.h; sourceTree = "<group>"; };
 		3EE2514F1A7525410045FCCB /* JPSimulatorHacksDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatorHacksDB.m; sourceTree = "<group>"; };
 		3EE251511A752A310045FCCB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		3EEDF5941B89B7E000CE022E /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		3EEDF5961B89B7E000CE022E /* JPSimulatorHacksSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = JPSimulatorHacksSample.entitlements; sourceTree = "<group>"; };
 		3EF96CF2193F915900E117DC /* JPSimulatorHacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSimulatorHacks.h; sourceTree = "<group>"; };
 		3EF96CF3193F915900E117DC /* JPSimulatorHacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatorHacks.m; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 			files = (
 				3EC4F236193F9087005C8B43 /* CoreGraphics.framework in Frameworks */,
 				3EC4F238193F9087005C8B43 /* UIKit.framework in Frameworks */,
-				3EEDF5951B89B7E000CE022E /* HomeKit.framework in Frameworks */,
 				3EC4F234193F9087005C8B43 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,7 +111,6 @@
 		3EC4F232193F9087005C8B43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3EEDF5941B89B7E000CE022E /* HomeKit.framework */,
 				3EE251511A752A310045FCCB /* libsqlite3.dylib */,
 				3EC4F233193F9087005C8B43 /* Foundation.framework */,
 				3EC4F235193F9087005C8B43 /* CoreGraphics.framework */,
@@ -240,7 +236,7 @@
 						DevelopmentTeam = HZ7YVCSB89;
 						SystemCapabilities = {
 							com.apple.HomeKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -446,7 +442,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = JPSimulatorHacksSample/JPSimulatorHacksSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -463,7 +458,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = JPSimulatorHacksSample/JPSimulatorHacksSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
