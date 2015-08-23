@@ -183,6 +183,12 @@ static inline KIFDisplacement KIFDisplacementForSwipingInDirection(KIFSwipeDirec
 - (void)waitForAnimationsToFinish;
 
 /*!
+ @abstract Tries to guess if there are any unfinished animations and waits for a certain amount of time to let them finish.
+ @param timeout The maximum duration the method waits to let the animations finish.
+ */
+- (void)waitForAnimationsToFinishWithTimeout:(NSTimeInterval)timeout;
+
+/*!
  @abstract Taps a particular view in the view hierarchy.
  @discussion The view or accessibility element with the given label is searched for in the view hierarchy. If the element isn't found or isn't currently tappable, then the step will attempt to wait until it is. Once the view is present and tappable, a tap event is simulated in the center of the view or element.
  @param label The accessibility label of the element to tap.
@@ -436,6 +442,14 @@ static inline KIFDisplacement KIFDisplacementForSwipingInDirection(KIFSwipeDirec
 - (void)swipeViewWithAccessibilityLabel:(NSString *)label value:(NSString *)value traits:(UIAccessibilityTraits)traits inDirection:(KIFSwipeDirection)direction;
 
 /*!
+ @abstract Swipes a particular view in the view heirarchy.
+ @discussion Unlike the -swipeViewWithAccessibilityLabel: family of methods, this method allows you to swipe an arbitrary element.  Combined with -waitForAccessibilityElement:view:withLabel:value:traits:tappable: or +[UIAccessibilityElement accessibilityElement:view:withLabel:value:traits:tappable:error:] this provides an opportunity for more complex logic.
+ @param element The accessibility element to tap.
+ @param viewToSwipe The view containing the accessibility element.
+ */
+- (void)swipeAccessibilityElement:(UIAccessibilityElement *)element inView:(UIView *)viewToSwipe inDirection:(KIFSwipeDirection)direction;
+
+/*!
  @abstract Scrolls a particular view in the view hierarchy by an amount indicated as a fraction of its size.
  @discussion The view will get the view with the specified accessibility label and scroll it by the indicated fraction of its size, with the scroll centered on the center of the view.
  @param label The accessibility label of the view to scroll.
@@ -509,4 +523,20 @@ static inline KIFDisplacement KIFDisplacementForSwipingInDirection(KIFSwipeDirec
  @param identifier Accessibility identifier of the table view.
  */
 - (void)moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath inTableViewWithAccessibilityIdentifier:(NSString *)identifier;
+
+/*!
+ @abstract Swipes the row at indexPath in the given direction.
+ 
+ @param indexPath Index path of the row to swipe.
+ @param tableView Table view to operate on.
+ @param direction Direction of the swipe.
+ */
+- (void)swipeRowAtIndexPath:(NSIndexPath *)indexPath inTableView:(UITableView *)tableView inDirection:(KIFSwipeDirection)direction;
+
+/*!
+ @abstract Backgrounds app using UIAutomation command, simulating pressing the Home button
+ @param duration Amount of time for a background event before the app becomes active again
+ */
+- (void)deactivateAppForDuration:(NSTimeInterval)duration;
+
 @end

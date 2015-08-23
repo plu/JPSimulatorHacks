@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## Expecta
 
-Copyright (c) 2011-2012 Specta Team - https://github.com/specta
+Copyright (c) 2011-2015 Specta Team - https://github.com/specta
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
