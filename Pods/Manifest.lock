@@ -1,14 +1,14 @@
 PODS:
   - Expecta (0.4.2)
-  - JPSimulatorHacks (1.2.1)
-  - KIF (3.2.3):
-    - KIF/XCTest (= 3.2.3)
-  - KIF/XCTest (3.2.3)
+  - JPSimulatorHacks (1.2.2)
+  - KIF (HEAD based on 3.2.3):
+    - KIF/XCTest (= HEAD based on 3.2.3)
+  - KIF/XCTest (HEAD based on 3.2.3)
 
 DEPENDENCIES:
   - Expecta (~> 0.3)
   - JPSimulatorHacks (from `.`)
-  - KIF (~> 3.0)
+  - KIF (HEAD)
 
 EXTERNAL SOURCES:
   JPSimulatorHacks:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
-  JPSimulatorHacks: fb9716fbb132404dcffde8dcf47908e948450b4b
+  JPSimulatorHacks: 02c8e3fbf191d9a871e548f5aca2986c8c07d53d
   KIF: a94bffe9c97e449e44f8fa481c53243d21309e1e
 
 COCOAPODS: 0.38.2

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A64E0E65A32736792E1ADF89"
+               BlueprintIdentifier = "9DE96C9D2E4E64E3D7021EFF"
                BuildableName = "libJPSimulatorHacks.a"
                BlueprintName = "JPSimulatorHacks"
                ReferencedContainer = "container:Pods.xcodeproj">
