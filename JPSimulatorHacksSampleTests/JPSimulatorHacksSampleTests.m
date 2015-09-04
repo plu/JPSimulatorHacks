@@ -72,7 +72,7 @@
 
 - (void)testHomeKitAccess
 {
-    XCTestExpectation *expectation = [self expectationWithDescription:nil];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"testHomeKitAccessExpectation"];
     HMHomeManager *homeManager = [[HMHomeManager alloc] init];
     NSString *name = [NSString stringWithFormat:@"Home %u", arc4random()];
     [homeManager addHomeWithName:name completionHandler:^(HMHome *home, NSError *error) {
