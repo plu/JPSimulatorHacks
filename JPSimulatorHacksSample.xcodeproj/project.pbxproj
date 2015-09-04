@@ -233,7 +233,6 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					3EC4F22F193F9087005C8B43 = {
-						DevelopmentTeam = HZ7YVCSB89;
 						SystemCapabilities = {
 							com.apple.HomeKit = {
 								enabled = 0;
