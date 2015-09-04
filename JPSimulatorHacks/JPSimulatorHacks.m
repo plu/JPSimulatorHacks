@@ -160,12 +160,6 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
         preferences[@"KeyboardsCurrentAndNext"] = @[keyboard];
     }];
 
-    [self editApplicationPreferences:^(NSMutableDictionary *preferences) {
-        preferences[@"KeyboardLastUsed"] = keyboard;
-        preferences[@"KeyboardLastChosen"] = keyboard;
-        preferences[@"KeyboardsCurrentAndNext"] = @[keyboard];
-    }];
-
     [self editGlobalPreferences:^(NSMutableDictionary *preferences) {
         NSArray *keyboards = preferences[@"AppleKeyboards"];
         preferences[@"AppleKeyboards"] = [keyboards arrayByAddingObject:keyboard];
