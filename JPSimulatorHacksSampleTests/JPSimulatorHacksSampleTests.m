@@ -46,8 +46,6 @@
 {
     [super setUp];
     [KIFTestActor setDefaultTimeout:3.0f];
-    [JPSimulatorHacks setDefaultKeyboard:@"de_DE@hw=German;sw=QWERTZ-German"];
-    [JPSimulatorHacks disableKeyboardHelpers];
     [JPSimulatorHacks grantAccessToAddressBook];
     [JPSimulatorHacks grantAccessToCalendar];
     [JPSimulatorHacks grantAccessToHomeKit];
@@ -86,22 +84,6 @@
 - (void)testPhotosAccess
 {
     expect([ALAssetsLibrary authorizationStatus]).to.equal(ALAuthorizationStatusAuthorized);
-}
-
-- (void)testKeyboardSettings
-{
-    static NSString *TextField = @"TextField";
-    [tester waitForViewWithAccessibilityLabel:TextField];
-
-    // If the keyboard settings do not get applied, this will end up autocorrected and will fail:
-    // Charly said, Main Street 
-    [tester clearTextFromAndThenEnterText:@"charly said, main street "
-           intoViewWithAccessibilityLabel:TextField];
-
-    // These are only on the German keyboard and proves that setDefaultKeyboard works.
-    [tester waitForViewWithAccessibilityLabel:@"ä"];
-    [tester waitForViewWithAccessibilityLabel:@"ö"];
-    [tester waitForViewWithAccessibilityLabel:@"ü"];
 }
 
 @end

@@ -51,7 +51,4 @@
 
 + (void)setTimeout:(NSTimeInterval)timeout;
 
-+ (void)disableKeyboardHelpers;
-+ (void)setDefaultKeyboard:(NSString *)keyboard;
-
 @end

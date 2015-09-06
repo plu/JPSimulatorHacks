@@ -140,32 +140,6 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     JPSimulatorHacksTimeout = timeout;
 }
 
-+ (void)disableKeyboardHelpers
-{
-    [self editPreferences:^(NSMutableDictionary *preferences) {
-        [preferences setValue:@NO forKey:@"KeyboardAutocapitalization"];
-        [preferences setValue:@NO forKey:@"KeyboardAutocorrection"];
-        [preferences setValue:@NO forKey:@"KeyboardCapsLock"];
-        [preferences setValue:@NO forKey:@"KeyboardCheckSpelling"];
-        [preferences setValue:@NO forKey:@"KeyboardPeriodShortcut"];
-        [preferences setValue:@YES forKey:@"UIKeyboardDidShowInternationalInfoAlert"];
-    }];
-}
-
-+ (void)setDefaultKeyboard:(NSString *)keyboard
-{
-    [self editPreferences:^(NSMutableDictionary *preferences) {
-        preferences[@"KeyboardLastUsed"] = keyboard;
-        preferences[@"KeyboardLastChosen"] = keyboard;
-        preferences[@"KeyboardsCurrentAndNext"] = @[keyboard];
-    }];
-
-    [self editGlobalPreferences:^(NSMutableDictionary *preferences) {
-        NSArray *keyboards = preferences[@"AppleKeyboards"];
-        preferences[@"AppleKeyboards"] = [keyboards arrayByAddingObject:keyboard];
-    }];
-}
-
 #pragma mark - Private
 
 + (NSString *)cddbPath

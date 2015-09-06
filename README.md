@@ -90,32 +90,6 @@ There's also an API to specify the bundle identifier, if necessary:
 + (BOOL) grantAccessToHomeKitForBundleIdentifier:(NSString *)bundleIdentifier;
 ```
 
-### Keyboard
-
-```objc
-#import <JPSimulatorHacks/JPSimulatorHacks.h>
-
-@implementation MyAppTests
-
-+ (void)setUp
-{
-    [super setUp];
-    [JPSimulatorHacks setDefaultKeyboard:@"en_US@hw=US;sw=QWERTY"];
-    [JPSimulatorHacks disableKeyboardHelpers];
-}
-
-@end
-```
-
-This will disable all the auto correction helpers and set the keyboard to the
-default English one.
-
-*Note*: Unfortunately this only works on iOS Simulator < 8.x. Even if you
-manually disable the autocorrection feature in the Settings.app in your
-simulator, it still does apply the autocorrection to the entered text. I
-consider this a bug in the simulator, so there's not much we can do about
-it.
-
 ### Photos
 
 ```objc
