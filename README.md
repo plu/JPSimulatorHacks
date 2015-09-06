@@ -144,7 +144,7 @@ change this default timeout via:
 real application target: Its `Host Application` *is not* set to `None`!
 See also: http://stackoverflow.com/a/28135995/598057
 * When using Xcode bots, sometimes the tests run into an timeout.
-* The method disableKeyboardHelpers only works on iOS < 8.x.
+* The keyboard helpers have been removed in 1.3.0
 
 ## License (MIT)
 
