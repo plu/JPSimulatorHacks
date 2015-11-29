@@ -67,6 +67,12 @@
 		794D5449F05EEA908578FFA5EE7A6E07 /* EXPUnsupportedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5A8723C8F2166B8F6CEAB3C103C69D /* EXPUnsupportedObject.h */; };
 		7BA908F785DF9173A51BE9ADA8E47356 /* NSValue+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = A1A2020E86ABB584A675587A0329E9F3 /* NSValue+Expecta.h */; };
 		7BB214E526F2DE253B6E63F7C52E057C /* EXPMatchers+respondTo.m in Sources */ = {isa = PBXBuildFile; fileRef = F00A340585C02F7B0415DC727D35220A /* EXPMatchers+respondTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7EF03E191C0A6090009350DC /* JPSimulatorHackFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF03E181C0A6090009350DC /* JPSimulatorHackFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EF03E1E1C0A6111009350DC /* JPSimulatorHacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 790795EB76F3AFE1864017E87D9EDA9F /* JPSimulatorHacks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EF03E1F1C0A6117009350DC /* JPSimulatorHacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7501907594C7ADFEA9D475165EDDF40B /* JPSimulatorHacks.m */; };
+		7EF03E201C0A6117009350DC /* JPSimulatorHacksDB.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2F75CD5A63B9F76EF9021EE4083949 /* JPSimulatorHacksDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EF03E211C0A6117009350DC /* JPSimulatorHacksDB.m in Sources */ = {isa = PBXBuildFile; fileRef = CC89E40ED730B7D3856FEBC384769FD0 /* JPSimulatorHacksDB.m */; };
+		7EF03E251C0A61ED009350DC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF03E241C0A61ED009350DC /* libsqlite3.0.tbd */; };
 		7F63B0E111C7ABA13C40246AC8DD38C7 /* KIFUITestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC9BE01FD3906CA6C1CCE2552EBCEAA /* KIFUITestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
 		7FC04A70B97445BD65BCAA83C9975C2F /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 249F89D0462762F99AD37B8A8D7F06AB /* UIApplication-KIFAdditions.h */; };
 		80AC0BE5657987FC67B51B0BB036A628 /* EXPMatchers+beFalsy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4AAE650F498CA408C1DF767B025CF9 /* EXPMatchers+beFalsy.h */; };
@@ -246,6 +252,11 @@
 		7B2D07B2C5ABB7F4BD267732FFDE99AC /* EXPMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = Expecta/EXPMatcher.h; sourceTree = "<group>"; };
 		7C4EA753BC9DEC14C0A4A23B8E0AC4D8 /* KIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "KIF-Private.xcconfig"; sourceTree = "<group>"; };
 		7DF657B94F78540674B93465AAA8A41C /* KIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KIF-dummy.m"; sourceTree = "<group>"; };
+		7EF03E161C0A6090009350DC /* JPSimulatorHackFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JPSimulatorHackFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF03E181C0A6090009350DC /* JPSimulatorHackFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPSimulatorHackFramework.h; sourceTree = "<group>"; };
+		7EF03E1A1C0A6090009350DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EF03E221C0A61BF009350DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7EF03E241C0A61ED009350DC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
 		7FDA0E985DDDF6657722FABADDCE1E7B /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager-KIFAdditions.h"; path = "Additions/NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
 		840ECA7A4035F32F3F4EDC7379AEB5E1 /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow-KIFAdditions.h"; path = "Additions/UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
 		85DF2783777BD2BF68BCD322A41A5924 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -338,6 +349,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EF03E121C0A6090009350DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF03E251C0A61ED009350DC /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE8E191BA14AA1859D0607DB0E385E15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +400,8 @@
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EF03E241C0A61ED009350DC /* libsqlite3.0.tbd */,
+				7EF03E221C0A61BF009350DC /* Foundation.framework */,
 				71D02674543F70094D4B6E5A64B45CB2 /* iOS */,
 			);
 			name = Frameworks;
@@ -389,7 +410,6 @@
 		264E3234F08C5275A0ACC5C53AE742F8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4BDCD3DC5E3EBCFA5B0EA4A88286AE97 /* JPSimulatorHacks */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -424,7 +444,7 @@
 				4B35B59949E6ABC4151382757443155C /* Support Files */,
 			);
 			name = JPSimulatorHacks;
-			path = ..;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		603EE927D7F44E63F921EC5CD336EE82 /* XCTest */ = {
@@ -514,11 +534,22 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				264E3234F08C5275A0ACC5C53AE742F8 /* Development Pods */,
+				7EF03E171C0A6090009350DC /* JPSimulatorHackFramework */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
 				043E801CBA0BD1AF91A8EBB38CEB8096 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				F5C61344D7786847D7C45F22A6E0AD80 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7EF03E171C0A6090009350DC /* JPSimulatorHackFramework */ = {
+			isa = PBXGroup;
+			children = (
+				7EF03E181C0A6090009350DC /* JPSimulatorHackFramework.h */,
+				7EF03E1A1C0A6090009350DC /* Info.plist */,
+				4BDCD3DC5E3EBCFA5B0EA4A88286AE97 /* JPSimulatorHacks */,
+			);
+			path = JPSimulatorHackFramework;
 			sourceTree = "<group>";
 		};
 		934ADF08ED8D654491D6CB5336D2ADA4 /* Support Files */ = {
@@ -549,6 +580,7 @@
 				4460AC5FD63DAAB6DAB2A09358ADE2FC /* libJPSimulatorHacks.a */,
 				F731B11D640EDAA2BD962416E65B64B6 /* libKIF.a */,
 				9B4816033AA404F08983AB3B2BCF82A9 /* libPods-JPSimulatorHacksSampleTests.a */,
+				7EF03E161C0A6090009350DC /* JPSimulatorHackFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -703,6 +735,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7EF03E131C0A6090009350DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF03E1E1C0A6111009350DC /* JPSimulatorHacks.h in Headers */,
+				7EF03E191C0A6090009350DC /* JPSimulatorHackFramework.h in Headers */,
+				7EF03E201C0A6117009350DC /* JPSimulatorHacksDB.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8EE7928A53511788E0D2D62F481F8840 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -782,6 +824,24 @@
 			productReference = 7220E7406520C14F4A7AB76E71F87D11 /* libExpecta.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		7EF03E151C0A6090009350DC /* JPSimulatorHackFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF03E1D1C0A6090009350DC /* Build configuration list for PBXNativeTarget "JPSimulatorHackFramework" */;
+			buildPhases = (
+				7EF03E111C0A6090009350DC /* Sources */,
+				7EF03E121C0A6090009350DC /* Frameworks */,
+				7EF03E131C0A6090009350DC /* Headers */,
+				7EF03E141C0A6090009350DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPSimulatorHackFramework;
+			productName = JPSimulatorHackFramework;
+			productReference = 7EF03E161C0A6090009350DC /* JPSimulatorHackFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		8CB083EA823AFC040B664894228C0F94 /* KIF */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C802A65D32E94562BDCA8E4B61A7B4 /* Build configuration list for PBXNativeTarget "KIF" */;
@@ -826,6 +886,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					7EF03E151C0A6090009350DC = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -843,9 +908,20 @@
 				39502133579D60DE9299E926C564D9A3 /* JPSimulatorHacks */,
 				8CB083EA823AFC040B664894228C0F94 /* KIF */,
 				DE55379299026DBA426150E3D7ECE74B /* Pods-JPSimulatorHacksSampleTests */,
+				7EF03E151C0A6090009350DC /* JPSimulatorHackFramework */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EF03E141C0A6090009350DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E29FA0B3235A7FC5E0A9E9E11B873E0 /* Sources */ = {
@@ -905,6 +981,15 @@
 				D19119930CFD129C5ECBE2B463A2BFEC /* JPSimulatorHacks-dummy.m in Sources */,
 				64012CE02F1B3FB992B809B9C965C57F /* JPSimulatorHacks.m in Sources */,
 				9D72FBC503C4CBD091B17FEAFDEBC44D /* JPSimulatorHacksDB.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF03E111C0A6090009350DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF03E1F1C0A6117009350DC /* JPSimulatorHacks.m in Sources */,
+				7EF03E211C0A6117009350DC /* JPSimulatorHacksDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1117,6 +1202,71 @@
 			};
 			name = Release;
 		};
+		7EF03E1B1C0A6090009350DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = JPSimulatorHackFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.JPSimulatorHackFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EF03E1C1C0A6090009350DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = JPSimulatorHackFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plunien.JPSimulatorHackFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		878F53C6A2545636636BD8499E5ED782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C4EA753BC9DEC14C0A4A23B8E0AC4D8 /* KIF-Private.xcconfig */;
@@ -1191,6 +1341,15 @@
 			buildConfigurations = (
 				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
 				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF03E1D1C0A6090009350DC /* Build configuration list for PBXNativeTarget "JPSimulatorHackFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF03E1B1C0A6090009350DC /* Debug */,
+				7EF03E1C1C0A6090009350DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
