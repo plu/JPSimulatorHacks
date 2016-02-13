@@ -14,7 +14,7 @@ documented below.
 
 ### Installation
 
-Install JPSimulatorHacks with [Cocoapods](http://cocoapods.org/)
+Install JPSimulatorHacks with [CocoaPods](http://cocoapods.org/)
 
 ```
 pod 'JPSimulatorHacks'
