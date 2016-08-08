@@ -30,10 +30,12 @@
 
 @implementation JPSimulatorHacks
 
-static NSString * const JPSimulatorHacksServiceAddressBook = @"kTCCServiceAddressBook";
-static NSString * const JPSimulatorHacksServicePhotos      = @"kTCCServicePhotos";
-static NSString * const JPSimulatorHacksServiceCalendar    = @"kTCCServiceCalendar";
-static NSString * const JPSimulatorHacksServiceHomeKit     = @"kTCCServiceWillow";
+static NSString * const JPSimulatorHacksServiceAddressBook      = @"kTCCServiceAddressBook";
+static NSString * const JPSimulatorHacksServicePhotos           = @"kTCCServicePhotos";
+static NSString * const JPSimulatorHacksServiceCalendar         = @"kTCCServiceCalendar";
+static NSString * const JPSimulatorHacksServiceHomeKit          = @"kTCCServiceWillow";
+static NSString * const JPSimulatorHacksServiceContacts         = @"kTCCServiceContacts";
+static NSString * const JPSimulatorHacksServiceContactsError    = @"Contacts Framework supported from iOS 9 or later";
 
 static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
@@ -133,6 +135,36 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     return [self changeAccessToService:JPSimulatorHacksServiceHomeKit
                       bundleIdentifier:bundleIdentifier
                                allowed:YES];
+}
+
++ (BOOL)grantAccessToContacts
+{
+    if (IS_IOS9_AND_UP)
+    {
+    return [self changeAccessToService:JPSimulatorHacksServiceContacts
+                      bundleIdentifier:[NSBundle mainBundle].bundleIdentifier
+                               allowed:YES];
+    }
+    else
+    {
+        NSLog(JPSimulatorHacksServiceContactsError);
+        return NO;
+    }
+}
+
++ (BOOL)grantAccessToContactsForBundleIdentifier:(NSString *)bundleIdentifier
+{
+    if (IS_IOS9_AND_UP)
+    {
+    return [self changeAccessToService:JPSimulatorHacksServiceContacts
+                      bundleIdentifier:bundleIdentifier
+                               allowed:YES];
+    }
+    else
+    {
+        NSLog(JPSimulatorHacksServiceContactsError);
+        return NO;
+    }
 }
 
 + (void)setTimeout:(NSTimeInterval)timeout
