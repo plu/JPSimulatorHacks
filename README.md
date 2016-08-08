@@ -124,6 +124,24 @@ NSURL *assetURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/plu/J
 ALAsset *asset = [JPSimulatorHacks addAssetWithURL:assetURL];
 ```
 
+### Contacts (iOS 9)
+
+This will grant permission for the new Contacts Framework which comes with iOS 9.
+
+```objc
+#import <JPSimulatorHacks/JPSimulatorHacks.h>
+
+@implementation MyAppTests
+
++ (void)setUp
+{
+    [super setUp];
+    [JPSimulatorHacks grantAccessToContacts];
+}
+
+@end
+```
+
 ### Timeout
 
 By default it tries to write the necessary entries to the `TCC.db` within
