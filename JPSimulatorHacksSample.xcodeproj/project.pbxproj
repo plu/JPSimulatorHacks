@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CB31B871D5A310B000D760D /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB31B861D5A310B000D760D /* Contacts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		1CB31B881D5A3137000D760D /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB31B861D5A310B000D760D /* Contacts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EC4F234193F9087005C8B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4F233193F9087005C8B43 /* Foundation.framework */; };
 		3EC4F236193F9087005C8B43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4F235193F9087005C8B43 /* CoreGraphics.framework */; };
 		3EC4F238193F9087005C8B43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4F237193F9087005C8B43 /* UIKit.framework */; };
@@ -36,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CB31B861D5A310B000D760D /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		3EC4F230193F9087005C8B43 /* JPSimulatorHacksSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPSimulatorHacksSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC4F233193F9087005C8B43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EC4F235193F9087005C8B43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CB31B881D5A3137000D760D /* Contacts.framework in Frameworks */,
 				3EC4F236193F9087005C8B43 /* CoreGraphics.framework in Frameworks */,
 				3EC4F238193F9087005C8B43 /* UIKit.framework in Frameworks */,
 				3EC4F234193F9087005C8B43 /* Foundation.framework in Frameworks */,
@@ -81,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CB31B871D5A310B000D760D /* Contacts.framework in Frameworks */,
 				3EC4F24D193F9087005C8B43 /* XCTest.framework in Frameworks */,
 				3EC4F24F193F9087005C8B43 /* UIKit.framework in Frameworks */,
 				3EC4F24E193F9087005C8B43 /* Foundation.framework in Frameworks */,
@@ -116,7 +111,6 @@
 		3EC4F232193F9087005C8B43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CB31B861D5A310B000D760D /* Contacts.framework */,
 				3EE251511A752A310045FCCB /* libsqlite3.dylib */,
 				3EC4F233193F9087005C8B43 /* Foundation.framework */,
 				3EC4F235193F9087005C8B43 /* CoreGraphics.framework */,
