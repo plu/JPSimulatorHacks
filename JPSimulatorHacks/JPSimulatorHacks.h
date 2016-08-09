@@ -26,8 +26,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define IS_IOS9_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0)
-
 @class ALAsset;
 
 @interface JPSimulatorHacks : NSObject
