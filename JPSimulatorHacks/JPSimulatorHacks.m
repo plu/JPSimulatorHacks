@@ -139,32 +139,26 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
 + (BOOL)grantAccessToContacts
 {
-    if (IS_IOS9_AND_UP)
-    {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_9_0
     return [self changeAccessToService:JPSimulatorHacksServiceContacts
                       bundleIdentifier:[NSBundle mainBundle].bundleIdentifier
                                allowed:YES];
-    }
-    else
-    {
-        NSLog(JPSimulatorHacksServiceContactsError);
+#else
+    NSLog(JPSimulatorHacksServiceContactsError);
         return NO;
-    }
+#endif
 }
 
 + (BOOL)grantAccessToContactsForBundleIdentifier:(NSString *)bundleIdentifier
 {
-    if (IS_IOS9_AND_UP)
-    {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_9_0
     return [self changeAccessToService:JPSimulatorHacksServiceContacts
                       bundleIdentifier:bundleIdentifier
                                allowed:YES];
-    }
-    else
-    {
-        NSLog(JPSimulatorHacksServiceContactsError);
-        return NO;
-    }
+#else
+    NSLog(JPSimulatorHacksServiceContactsError);
+    return NO;
+#endif
 }
 
 + (void)setTimeout:(NSTimeInterval)timeout
