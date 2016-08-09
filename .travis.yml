@@ -5,5 +5,6 @@ before_script:
   - export LANG=en_US.UTF-8
 install: echo
 script:
+  - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/JPSimulatorHacksSample-*/
   - set -o pipefail
   - xcodebuild -workspace JPSimulatorHacksSample.xcworkspace -scheme 'JPSimulatorHacksSample' -sdk iphonesimulator -configuration Debug test | xcpretty -c
