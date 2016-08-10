@@ -49,6 +49,9 @@
 + (BOOL)grantAccessToHomeKit;
 + (BOOL)grantAccessToHomeKitForBundleIdentifier:(NSString *)bundleIdentifier;
 
++ (BOOL)grantAccessToContacts;
++ (BOOL)grantAccessToContactsForBundleIdentifier:(NSString *)bundleIdentifier;
+
 + (void)setTimeout:(NSTimeInterval)timeout;
 
 @end

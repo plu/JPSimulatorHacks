@@ -30,10 +30,12 @@
 
 @implementation JPSimulatorHacks
 
-static NSString * const JPSimulatorHacksServiceAddressBook = @"kTCCServiceAddressBook";
-static NSString * const JPSimulatorHacksServicePhotos      = @"kTCCServicePhotos";
-static NSString * const JPSimulatorHacksServiceCalendar    = @"kTCCServiceCalendar";
-static NSString * const JPSimulatorHacksServiceHomeKit     = @"kTCCServiceWillow";
+static NSString * const JPSimulatorHacksServiceAddressBook      = @"kTCCServiceAddressBook";
+static NSString * const JPSimulatorHacksServicePhotos           = @"kTCCServicePhotos";
+static NSString * const JPSimulatorHacksServiceCalendar         = @"kTCCServiceCalendar";
+static NSString * const JPSimulatorHacksServiceHomeKit          = @"kTCCServiceWillow";
+static NSString * const JPSimulatorHacksServiceContacts         = @"kTCCServiceContacts";
+static NSString * const JPSimulatorHacksServiceContactsError    = @"Contacts Framework supported from iOS 9 or later";
 
 static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 
@@ -133,6 +135,30 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     return [self changeAccessToService:JPSimulatorHacksServiceHomeKit
                       bundleIdentifier:bundleIdentifier
                                allowed:YES];
+}
+
++ (BOOL)grantAccessToContacts
+{
+#if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
+    return [self changeAccessToService:JPSimulatorHacksServiceContacts
+                      bundleIdentifier:[NSBundle mainBundle].bundleIdentifier
+                               allowed:YES];
+#else
+    NSLog(JPSimulatorHacksServiceContactsError);
+        return NO;
+#endif
+}
+
++ (BOOL)grantAccessToContactsForBundleIdentifier:(NSString *)bundleIdentifier
+{
+#if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
+    return [self changeAccessToService:JPSimulatorHacksServiceContacts
+                      bundleIdentifier:bundleIdentifier
+                               allowed:YES];
+#else
+    NSLog(JPSimulatorHacksServiceContactsError);
+    return NO;
+#endif
 }
 
 + (void)setTimeout:(NSTimeInterval)timeout

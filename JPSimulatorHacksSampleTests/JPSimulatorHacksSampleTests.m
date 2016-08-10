@@ -36,6 +36,10 @@
 #import <KIF/UIAccessibilityElement-KIFAdditions.h>
 #import <XCTest/XCTest.h>
 
+#if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
+    #import <Contacts/Contacts.h>
+#endif
+
 @interface JPSimulatorHacksSampleTests : XCTestCase
 
 @end
@@ -50,6 +54,9 @@
     [JPSimulatorHacks grantAccessToCalendar];
     [JPSimulatorHacks grantAccessToHomeKit];
     [JPSimulatorHacks grantAccessToPhotos];
+#if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
+    [JPSimulatorHacks grantAccessToContacts];
+#endif
 }
 
 - (void)testAddAssetWithURL
@@ -84,6 +91,13 @@
 - (void)testPhotosAccess
 {
     expect([ALAssetsLibrary authorizationStatus]).to.equal(ALAuthorizationStatusAuthorized);
+}
+
+-(void)testContactsAccess
+{
+#if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
+    expect([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts]).equal(CNAuthorizationStatusAuthorized);
+#endif
 }
 
 @end
