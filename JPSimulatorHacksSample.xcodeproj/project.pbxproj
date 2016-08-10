@@ -19,8 +19,8 @@
 		3EC4F24F193F9087005C8B43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4F237193F9087005C8B43 /* UIKit.framework */; };
 		3EC4F257193F9087005C8B43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4F255193F9087005C8B43 /* InfoPlist.strings */; };
 		3EC4F259193F9087005C8B43 /* JPSimulatorHacksSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4F258193F9087005C8B43 /* JPSimulatorHacksSampleTests.m */; };
-		63BE4141C44748CCB995A770 /* libPods-JPSimulatorHacksSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */; };
 		679B02351965D14D00600C91 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679B02341965D14D00600C91 /* Storyboard.storyboard */; };
+		A0ACAD6826CCC5B489061970 /* libPods-JPSimulatorHacksSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C015AFA2D6CEF5251288F7 /* libPods-JPSimulatorHacksSampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14E48DEB80FA35EF43AC0151 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPSimulatorHacksSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		1892DD12EABC5DCE221BF991 /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPSimulatorHacksSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EC4F230193F9087005C8B43 /* JPSimulatorHacksSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPSimulatorHacksSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC4F233193F9087005C8B43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EC4F235193F9087005C8B43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,10 +58,8 @@
 		3EEDF5961B89B7E000CE022E /* JPSimulatorHacksSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = JPSimulatorHacksSample.entitlements; sourceTree = "<group>"; };
 		3EF96CF2193F915900E117DC /* JPSimulatorHacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSimulatorHacks.h; sourceTree = "<group>"; };
 		3EF96CF3193F915900E117DC /* JPSimulatorHacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSimulatorHacks.m; sourceTree = "<group>"; };
-		49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53E9C0BFEBF2543FEDCE5F7F /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPSimulatorHacksSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		679B02341965D14D00600C91 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		FD4D2B8F172B1E05433035E0 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPSimulatorHacksSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		81C015AFA2D6CEF5251288F7 /* libPods-JPSimulatorHacksSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPSimulatorHacksSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				3EC4F24D193F9087005C8B43 /* XCTest.framework in Frameworks */,
 				3EC4F24F193F9087005C8B43 /* UIKit.framework in Frameworks */,
 				3EC4F24E193F9087005C8B43 /* Foundation.framework in Frameworks */,
-				63BE4141C44748CCB995A770 /* libPods-JPSimulatorHacksSampleTests.a in Frameworks */,
+				A0ACAD6826CCC5B489061970 /* libPods-JPSimulatorHacksSampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 				3EC4F239193F9087005C8B43 /* JPSimulatorHacksSample */,
 				3EC4F252193F9087005C8B43 /* JPSimulatorHacksSampleTests */,
 				3EC4F231193F9087005C8B43 /* Products */,
-				ADB76A459DBE8A01B8A25DF4 /* Pods */,
+				FA5C6DE7B78353211101802A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +116,7 @@
 				3EC4F235193F9087005C8B43 /* CoreGraphics.framework */,
 				3EC4F237193F9087005C8B43 /* UIKit.framework */,
 				3EC4F24C193F9087005C8B43 /* XCTest.framework */,
-				49F39C16C71D470F95035BC9 /* libPods-JPSimulatorHacksSampleTests.a */,
+				81C015AFA2D6CEF5251288F7 /* libPods-JPSimulatorHacksSampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,11 +174,11 @@
 			path = JPSimulatorHacks;
 			sourceTree = "<group>";
 		};
-		ADB76A459DBE8A01B8A25DF4 /* Pods */ = {
+		FA5C6DE7B78353211101802A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				53E9C0BFEBF2543FEDCE5F7F /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */,
-				FD4D2B8F172B1E05433035E0 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */,
+				1892DD12EABC5DCE221BF991 /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */,
+				14E48DEB80FA35EF43AC0151 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -207,11 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EC4F25F193F9087005C8B43 /* Build configuration list for PBXNativeTarget "JPSimulatorHacksSampleTests" */;
 			buildPhases = (
-				5334BE86380A408DBF393030 /* Check Pods Manifest.lock */,
+				3184808753BC1A88572D9DF5 /* [CP] Check Pods Manifest.lock */,
 				3EC4F247193F9087005C8B43 /* Sources */,
 				3EC4F248193F9087005C8B43 /* Frameworks */,
 				3EC4F249193F9087005C8B43 /* Resources */,
-				6052FE846C274F77BB137DD5 /* Copy Pods Resources */,
+				3BFD2ED58179B3598AD23B45 /* [CP] Embed Pods Frameworks */,
+				2F90EA8E43BE1D464AE9317D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,14 +285,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5334BE86380A408DBF393030 /* Check Pods Manifest.lock */ = {
+		2F90EA8E43BE1D464AE9317D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3184808753BC1A88572D9DF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,19 +315,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6052FE846C274F77BB137DD5 /* Copy Pods Resources */ = {
+		3BFD2ED58179B3598AD23B45 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPSimulatorHacksSampleTests/Pods-JPSimulatorHacksSampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -473,7 +489,7 @@
 		};
 		3EC4F260193F9087005C8B43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53E9C0BFEBF2543FEDCE5F7F /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */;
+			baseConfigurationReference = 1892DD12EABC5DCE221BF991 /* Pods-JPSimulatorHacksSampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JPSimulatorHacksSample.app/JPSimulatorHacksSample";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -497,7 +513,7 @@
 		};
 		3EC4F261193F9087005C8B43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD4D2B8F172B1E05433035E0 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */;
+			baseConfigurationReference = 14E48DEB80FA35EF43AC0151 /* Pods-JPSimulatorHacksSampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JPSimulatorHacksSample.app/JPSimulatorHacksSample";
 				FRAMEWORK_SEARCH_PATHS = (
