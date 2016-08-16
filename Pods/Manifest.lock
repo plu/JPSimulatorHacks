@@ -1,6 +1,8 @@
 PODS:
   - Expecta (0.4.2)
-  - JPSimulatorHacks (1.4.0)
+  - JPSimulatorHacks (1.4.1):
+    - JPSimulatorHacks/standard (= 1.4.1)
+  - JPSimulatorHacks/standard (1.4.1)
   - KIF (3.4.2):
     - KIF/Core (= 3.4.2)
   - KIF/Core (3.4.2)
@@ -16,7 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
-  JPSimulatorHacks: 41580ec46fe32c941799d7d970feccc8daf16319
+  JPSimulatorHacks: bfabfea9965dbf5929bc575874d634fa7a9b097c
   KIF: b518c9831453abea5afdbbde3908ec47832d6d56
 
 PODFILE CHECKSUM: 627ab83e5f5e86459086389e90b64c1a81696b33
