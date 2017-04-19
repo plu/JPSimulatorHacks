@@ -35,6 +35,7 @@
 #import <KIF/KIF.h>
 #import <KIF/UIAccessibilityElement-KIFAdditions.h>
 #import <XCTest/XCTest.h>
+#import <AVFoundation/AVFoundation.h>
 
 #if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
     #import <Contacts/Contacts.h>
@@ -57,6 +58,7 @@
 #if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
     [JPSimulatorHacks grantAccessToContacts];
 #endif
+    [JPSimulatorHacks grantAccessToCamera];
 }
 
 - (void)testAddAssetWithURL
@@ -98,6 +100,11 @@
 #if defined(__IPHONE_9_0) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
     expect([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts]).equal(CNAuthorizationStatusAuthorized);
 #endif
+}
+
+- (void)testCameraAccess
+{
+    expect([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo]).equal(AVAuthorizationStatusAuthorized);
 }
 
 @end

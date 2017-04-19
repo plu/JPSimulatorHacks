@@ -35,6 +35,7 @@ static NSString * const JPSimulatorHacksServicePhotos           = @"kTCCServiceP
 static NSString * const JPSimulatorHacksServiceCalendar         = @"kTCCServiceCalendar";
 static NSString * const JPSimulatorHacksServiceHomeKit          = @"kTCCServiceWillow";
 static NSString * const JPSimulatorHacksServiceContacts         = @"kTCCServiceContacts";
+static NSString * const JPSimulatorHacksServiceCamera           = @"kTCCServiceCamera";
 static NSString * const JPSimulatorHacksServiceContactsError    = @"Contacts Framework supported from iOS 9 or later";
 
 static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
@@ -159,6 +160,20 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
     NSLog(JPSimulatorHacksServiceContactsError);
     return NO;
 #endif
+}
+
++ (BOOL)grantAccessToCamera
+{
+    return [self changeAccessToService:JPSimulatorHacksServiceCamera
+                      bundleIdentifier:[NSBundle mainBundle].bundleIdentifier
+                               allowed:YES];
+}
+
++ (BOOL)grantAccessToCameraForBundleIdentifier:(NSString *)bundleIdentifier
+{
+    return [self changeAccessToService:JPSimulatorHacksServiceCamera
+                      bundleIdentifier:bundleIdentifier
+                               allowed:YES];
 }
 
 + (void)setTimeout:(NSTimeInterval)timeout
