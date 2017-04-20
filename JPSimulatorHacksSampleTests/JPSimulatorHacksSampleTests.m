@@ -59,6 +59,7 @@
     [JPSimulatorHacks grantAccessToContacts];
 #endif
     [JPSimulatorHacks grantAccessToCamera];
+    [JPSimulatorHacks grantAccessToMicrophone];
 }
 
 - (void)testAddAssetWithURL
@@ -105,6 +106,11 @@
 - (void)testCameraAccess
 {
     expect([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo]).equal(AVAuthorizationStatusAuthorized);
+}
+
+- (void)testMicrophoneAccess
+{
+    expect([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio]).equal(AVAuthorizationStatusAuthorized);
 }
 
 @end
