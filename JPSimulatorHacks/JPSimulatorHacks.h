@@ -52,6 +52,9 @@
 + (BOOL)grantAccessToContacts;
 + (BOOL)grantAccessToContactsForBundleIdentifier:(NSString *)bundleIdentifier;
 
++ (BOOL)grantAccessToCamera;
++ (BOOL)grantAccessToCameraForBundleIdentifier:(NSString *)bundleIdentifier;
+
 + (void)setTimeout:(NSTimeInterval)timeout;
 
 @end
