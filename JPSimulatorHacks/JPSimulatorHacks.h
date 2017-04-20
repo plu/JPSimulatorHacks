@@ -55,6 +55,9 @@
 + (BOOL)grantAccessToCamera;
 + (BOOL)grantAccessToCameraForBundleIdentifier:(NSString *)bundleIdentifier;
 
++ (BOOL)grantAccessToMicrophone;
++ (BOOL)grantAccessToMicrophoneForBundleIdentifier:(NSString *)bundleIdentifier;
+
 + (void)setTimeout:(NSTimeInterval)timeout;
 
 @end
