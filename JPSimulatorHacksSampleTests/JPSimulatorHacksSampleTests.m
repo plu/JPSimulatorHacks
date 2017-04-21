@@ -60,6 +60,7 @@
 #endif
     [JPSimulatorHacks grantAccessToCamera];
     [JPSimulatorHacks grantAccessToMicrophone];
+    [JPSimulatorHacks grantAccessToReminders];
 }
 
 - (void)testAddAssetWithURL
@@ -111,6 +112,22 @@
 - (void)testMicrophoneAccess
 {
     expect([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio]).equal(AVAuthorizationStatusAuthorized);
+}
+
+- (void)testRemindersAccess
+{
+    EKEventStore *eventStore = [[EKEventStore alloc] init];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Request entity timed out!"];
+    [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError * _Nullable error) {
+        expect(granted).to.beTruthy();
+        [expectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            failure(@"Reminders access not enabled!");
+        }
+    }];
 }
 
 @end

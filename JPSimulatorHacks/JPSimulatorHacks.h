@@ -58,6 +58,9 @@
 + (BOOL)grantAccessToMicrophone;
 + (BOOL)grantAccessToMicrophoneForBundleIdentifier:(NSString *)bundleIdentifier;
 
++ (BOOL)grantAccessToReminders;
++ (BOOL)grantAccessToRemindersForBundleIdentifier:(NSString *)bundleIdentifier;
+
 + (void)setTimeout:(NSTimeInterval)timeout;
 
 @end
