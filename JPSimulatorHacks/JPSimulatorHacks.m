@@ -38,6 +38,7 @@ static NSString * const JPSimulatorHacksServiceContacts         = @"kTCCServiceC
 static NSString * const JPSimulatorHacksServiceCamera           = @"kTCCServiceCamera";
 static NSString * const JPSimulatorHacksServiceMicrophone       = @"kTCCServiceMicrophone";
 static NSString * const JPSimulatorHacksServiceReminders        = @"kTCCServiceReminders";
+static NSString * const JPSimulatorHacksServiceTwitter          = @"kTCCServiceTwitter";
 static NSString * const JPSimulatorHacksServiceContactsError    = @"Contacts Framework supported from iOS 9 or later";
 
 static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
@@ -202,6 +203,20 @@ static NSTimeInterval JPSimulatorHacksTimeout = 15.0f;
 + (BOOL)grantAccessToRemindersForBundleIdentifier:(NSString *)bundleIdentifier
 {
     return [self changeAccessToService:JPSimulatorHacksServiceReminders
+                      bundleIdentifier:bundleIdentifier
+                               allowed:YES];
+}
+
++ (BOOL)grantAccessToTwitter
+{
+    return [self changeAccessToService:JPSimulatorHacksServiceTwitter
+                      bundleIdentifier:[NSBundle mainBundle].bundleIdentifier
+                               allowed:YES];
+}
+
++ (BOOL)grantAccessToTwitterForBundleIdentifier:(NSString *)bundleIdentifier
+{
+    return [self changeAccessToService:JPSimulatorHacksServiceTwitter
                       bundleIdentifier:bundleIdentifier
                                allowed:YES];
 }
