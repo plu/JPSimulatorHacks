@@ -26,6 +26,13 @@
 
 #import <Foundation/Foundation.h>
 
+//! Project version number for JPSimulatorHacks.
+FOUNDATION_EXPORT double JPSimulatorHacksVersionNumber;
+
+//! Project version string for JPSimulatorHacks.
+FOUNDATION_EXPORT const unsigned char JPSimulatorHacksVersionString[];
+
+
 @class ALAsset;
 
 @interface JPSimulatorHacks : NSObject
