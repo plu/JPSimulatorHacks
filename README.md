@@ -20,6 +20,13 @@ Install JPSimulatorHacks with [CocoaPods](http://cocoapods.org/)
 pod 'JPSimulatorHacks'
 ```
 
+Or, install via [Carthage](https://github.com/Carthage/Carthage)
+
+```
+github "plu/JPSimulatorHacks"
+```
+
+
 ## Usage
 
 ### AddressBook
