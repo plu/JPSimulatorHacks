@@ -1,3 +1,5 @@
+project 'JPSimulatorHacksSample.xcodeproj'
+
 target 'JPSimulatorHacksSampleTests' do
     pod 'JPSimulatorHacks', :path => '.'
     pod 'Expecta', '~> 0.3'
